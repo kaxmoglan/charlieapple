@@ -10,7 +10,7 @@ const imagemin = require("gulp-imagemin");
 
 const files = {
   src: {
-    pug: "./src/pug/**/*.pug",
+    pug: "./src/pug/*.pug",
     sass: "./src/sass/**/*.scss",
     js: "./src/js/**/*.js",
     images: "./src/images/*",
@@ -57,8 +57,17 @@ function images() {
     .pipe(gulp.dest(files.dest.images));
 }
 
+// WATCH
+function watch() {
+  gulp.watch(files.src.pug, html);
+  gulp.watch(files.src.sass, css);
+  gulp.watch(files.src.js, js);
+  gulp.watch(files.src.images, images);
+}
+
 // EXPORTS
 exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
+exports.watch = watch;
