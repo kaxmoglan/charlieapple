@@ -6,6 +6,21 @@ footer {
   background-color: colors.$dark_grey;
   padding: 4rem 4rem;
 
+  .copyright {
+    position: relative;
+    bottom: -3rem;
+    color: colors.$white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      font-size: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
+
   .content {
     margin: 0 auto;
     max-width: 95rem;
@@ -73,7 +88,7 @@ footer {
       justify-content: center;
 
       svg {
-        width: 2.1rem;
+        width: 2.3rem;
       }
     }
 
@@ -104,7 +119,7 @@ footer {
       margin: 0 0 2rem 6rem;
 
       svg {
-        width: 23px;
+        width: 2.3rem;
       }
 
       .underline {
