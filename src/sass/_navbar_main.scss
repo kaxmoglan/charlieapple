@@ -1,12 +1,16 @@
 @use 'colors';
 
 .navbar-main {
+  a:hover {
+    color: colors.$white;
+  }
   width: 100%;
   height: 6rem;
   background: colors.$dark_grey;
   display: flex;
   flex-direction: row;
   align-items: center;
+  z-index: 10;
 
   &__logo-container {
     height: 100%;
@@ -14,6 +18,7 @@
 
     #charlieapple-logo {
       width: 3.5rem;
+      fill: colors.$green;
     }
 
     #charlieapple-text {
@@ -42,6 +47,7 @@
     align-items: center;
     margin: 0 3rem 0 auto;
     height: 100%;
+    z-index: 50;
   }
 
   &__item {

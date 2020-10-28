@@ -3,6 +3,8 @@
 @use 'navbar_main';
 @use 'navbar_secondary';
 @use 'footer';
+@use 'contactBtn';
+@use 'home';
 
 @font-face {
   font-family: "brushtip";
@@ -15,6 +17,7 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
+  background: colors.$dark_grey;
 }
 
 * {
@@ -26,9 +29,31 @@ html {
 a {
   text-decoration: none;
   color: colors.$green;
-  font-weight: bold;
+  font-weight: normal;
+  transition: all 250ms ease;
+
+  &:hover {
+    color: darken(colors.$green, 10%);
+  }
 }
 
 ul {
   list-style: none;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.gradient-light {
+  background-image: colors.$gradient_light;
+}
+
+.gradient-dark {
+  background-image: colors.$gradient_dark;
 }

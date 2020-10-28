@@ -1,10 +1,14 @@
 @use 'colors';
+@use 'responsive';
 
 footer {
-  margin-top: 10rem;
   width: 100%;
   background-color: colors.$dark_grey;
   padding: 4rem 4rem;
+  margin-bottom: 0;
+  a:hover {
+    color: colors.$white;
+  }
 
   .copyright {
     position: relative;
@@ -23,7 +27,7 @@ footer {
 
   .content {
     margin: 0 auto;
-    max-width: 95rem;
+    max-width: 110rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -53,7 +57,7 @@ footer {
     }
 
     &__item {
-      padding-bottom: 2rem;
+      padding-bottom: 1.25rem;
       font-size: 1.4rem;
       display: flex;
       align-items: center;
@@ -116,7 +120,11 @@ footer {
       display: flex;
       align-items: center;
       gap: 2rem;
-      margin: 0 0 2rem 6rem;
+      margin: 0 0 2rem 20%;
+
+      @include responsive.medium-screen {
+        margin-left: 2%;
+      }
 
       svg {
         width: 2.3rem;

@@ -1,0 +1,106 @@
+@use 'colors';
+@use 'responsive';
+
+.home-page {
+  .navbar-main {
+    position: fixed;
+    top: 0;
+  }
+
+  &__main {
+    .welcome {
+      height: calc(100vh - 6rem);
+      margin-top: 6rem;
+      grid-column: 1 / 13;
+      background-color: colors.$dark_grey;
+
+      .charlieapple-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 10;
+        fill: colors.$green;
+        pointer-events: none;
+      }
+
+      .info {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        color: colors.$white;
+
+        h1 {
+          font-weight: normal;
+          font-size: 4.3rem;
+          margin-bottom: 1rem;
+        }
+
+        .contactBtn {
+          margin-top: 2rem;
+        }
+
+        @include responsive.medium-screen {
+          text-align: right;
+          top: 20%;
+          right: 5%;
+        }
+      }
+    }
+  }
+
+  .about-us {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10rem;
+    padding: 14rem 6% 5rem 6%;
+
+    @include responsive.medium-screen {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .text {
+      .body-text {
+        margin-bottom: 2rem;
+      }
+
+      .headline {
+        margin-bottom: 3rem;
+
+        h1 {
+          font-size: 5rem;
+        }
+      }
+
+      .contactBtn {
+        margin-left: 40%;
+        margin-top: 3rem;
+
+        @include responsive.medium-screen {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .image {
+      max-width: 50rem;
+      height: 100%;
+      margin-top: 2rem;
+
+      img {
+        width: 100%;
+      }
+
+      @include responsive.medium-lg-screen {
+        margin-top: 15vh;
+      }
+
+      @include responsive.medium-screen {
+        display: none;
+      }
+    }
+  }
+}
