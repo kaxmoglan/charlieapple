@@ -1,42 +1,52 @@
 footer
-  //- div(class="links")
-  .links
-    h3 Links
-    ul(class="links__list")
-      li(class="links__item") 
-        a(href="./prices.html")
-          p Prices
-      li(class="links__item") 
-        a(href="./contact.html")
-          p Contact
-      li(class="links__item") 
-        a(href="./testimonials.html")
-          p Testimonials
+  .content
+    .links
+      h3 Links
+      ul(class="links__list")
+        li(class="links__item") 
+          a.links__link(href="./prices.html")
+            p Prices
+            .underline
+            
+        li(class="links__item") 
+          a.links__link(href="./contact.html")
+            p Contact
+            .underline
+            
+        li(class="links__item") 
+          a.links__link(href="./testimonials.html")
+            p Testimonials
+            .underline
+            
 
-  .social
-    h3 Social
-    .social__container
+    .social
+      h3 Social
+      .social__container
+        
+        a.social__link(href="http://www.twitter.com" target="_blank")
+            include svg/twitter.svg
+        
+        a.social__link(href="http://www.facebook.com" target="_blank")
+          include svg/facebook.svg 
+
+        a.social__link(href="http://www.instagram.com" target="_blank")
+          include svg/instagram.svg 
+
+        a(href="http://www.linkedin.com" target="_blank" class="social__link")
+          include svg/linkedin.svg 
+
+    .contact
+      h3 Get in touch
       
-      a(href="http://www.twitter.com" target="_blank" class="social__link")
-          include svg/twitter.svg
-      
-      a(href="http://www.facebook.com" target="_blank" class="social__link")
-        include svg/facebook.svg 
+      .contact__container
+        .contact__phone  
+          include svg/phone.svg
+          a.contact__link(href="tel:+442086686921")
+            p 020 8668 6921
+            .underline
 
-      a(href="http://www.instagram.com" target="_blank" class="social__link")
-        include svg/instagram.svg 
-
-      a(href="http://www.linkedin.com" target="_blank" class="social__link")
-        include svg/linkedin.svg 
-
-  .contact
-    h3 Get in touch
-    .contact__phone
-      include svg/phone.svg
-      a(href="tel:+442086686921")
-        p 020 8668 6921
-
-    .contact__email
-      include svg/email.svg
-      a(href="mailto:info@charlieapple.com")
-        p info@charlieapple.com
+        .contact__email  
+          include svg/email.svg
+          a.contact__link(href="mailto:info@charlieapple.com")
+            p info@charlieapple.com
+            .underline

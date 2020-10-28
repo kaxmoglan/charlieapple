@@ -1,0 +1,128 @@
+@use 'colors';
+
+footer {
+  margin-top: 10rem;
+  width: 100%;
+  background-color: colors.$dark_grey;
+  padding: 4rem 4rem;
+
+  .content {
+    margin: 0 auto;
+    max-width: 95rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h3 {
+    color: colors.$white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  a {
+    color: colors.$white;
+    font-weight: normal;
+  }
+
+  svg {
+    color: colors.$green;
+  }
+
+  .links {
+    &__list {
+      width: 100%;
+      margin-top: 3.2rem;
+    }
+
+    &__item {
+      padding-bottom: 2rem;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__link {
+      transition: all 250ms ease;
+
+      .underline {
+        position: relative;
+        top: 0.3rem;
+        left: 50%;
+        height: 0.2rem;
+        width: 0;
+        background-color: colors.$green;
+        transition: all 250ms ease;
+      }
+
+      &:hover {
+        .underline {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .social {
+    &__container {
+      display: flex;
+      justify-content: center;
+
+      svg {
+        width: 2.1rem;
+      }
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: all 250ms ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .contact {
+    &__container {
+      margin-top: 3rem;
+    }
+
+    &__phone,
+    &__email {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 0 0 2rem 6rem;
+
+      svg {
+        width: 23px;
+      }
+
+      .underline {
+        margin-top: 0.5rem;
+        height: 0.2rem;
+        width: 0;
+        background-color: colors.$green;
+        position: relative;
+        left: 50%;
+        transition: all 250ms ease;
+      }
+
+      &:hover {
+        .underline {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
