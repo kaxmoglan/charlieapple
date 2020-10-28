@@ -11,6 +11,7 @@ const imagemin = require("gulp-imagemin");
 const files = {
   src: {
     pug: "./src/pug/*.pug",
+    pugIncludes: "./src/pug/includes/*",
     sass: "./src/sass/**/*.scss",
     js: "./src/js/**/*.js",
     images: "./src/images/*",
@@ -60,6 +61,7 @@ function images() {
 // WATCH
 function watch() {
   gulp.watch(files.src.pug, html);
+  gulp.watch(files.src.pugIncludes, html);
   gulp.watch(files.src.sass, css);
   gulp.watch(files.src.js, js);
   gulp.watch(files.src.images, images);

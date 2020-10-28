@@ -1,0 +1,88 @@
+mixin navbarSecondary(type, active)
+  nav.navbar-secondary
+    ul.navbar-secondary__list
+      if type == "events"
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="event-management" 
+            href="#"
+            class= active == "event management" ? "active" : ""
+          )
+            p Event Management
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="markets" 
+            href="#"
+            class= active == "markets" ? "active" : ""
+          )
+            p Markets
+            .underline
+
+      else if type == "design"
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="website-design" 
+            href="#"
+            class= active == "website design" ? "active" : ""
+          )
+            p Website Design
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="design-for-print" 
+            href="#"
+            class= active == "design for print" ? "active" : ""
+          )
+            p Design for Print
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="logo-design" 
+            href="#"
+            class= active == "logo design" ? "active" : ""
+          )
+            p Logo Design
+            .underline
+
+      else if type == "marketing"
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="workshops" 
+            href="#"
+            class= active == "workshops" ? "active" : ""
+          )
+            p Workshops
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="freelance" 
+            href="#"
+            class= active == "freelance" ? "active" : ""
+          )
+            p Freelance
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="social-media" 
+            href="#"
+            class= active == "social media" ? "active" : ""
+          )
+            p Social Media
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="copywriting" 
+            href="#"
+            class= active == "copywriting" ? "active" : ""
+          )
+            p Copywriting
+            .underline
+        li.navbar-secondary__item
+          a.navbar-secondary__link(
+            id="marcomms" 
+            href="#"
+            class= active == "marcomms" ? "active" : ""
+          )
+            p Marcomms
+            .underline

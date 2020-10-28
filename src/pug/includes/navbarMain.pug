@@ -1,0 +1,38 @@
+mixin navbarMain(logo, active)
+  nav.navbar-main
+    if logo == "logo"
+      .navbar-main__logo-container
+        a(href="./index.html" id="charlieapple-logo")
+          include svg/charlieapple.svg
+        a(href="./index.html" id="charlieapple-text")
+          p Charlie Apple
+    
+    ul.navbar-main__list
+      li.navbar-main__item
+        a.navbar-main__link(
+          id="events-link" 
+          href="#" 
+          class= active == "events" ? "active" : ""
+        )
+          p Events
+          .underline
+
+      li.navbar-main__item
+        a.navbar-main__link(
+          id="design-link" 
+          href="#" 
+          class= active == "design" ? "active" : ""
+        )
+          p Design
+          .underline
+
+      li.navbar-main__item
+        a.navbar-main__link(
+          id="marketing-link" 
+          href="./marketing.html" 
+          class= active == "marketing" ? "active" : ""
+        )
+          p Marketing
+          .underline
+          
+    

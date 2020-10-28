@@ -2,3 +2,32 @@
 @use 'colors';
 @use 'navbar_main';
 @use 'navbar_secondary';
+
+@font-face {
+  font-family: "brushtip";
+  src: url("fonts/btctrial-webfont.woff2") format("woff2"),
+    url("fonts/btctrial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$green;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}

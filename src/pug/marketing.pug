@@ -4,12 +4,9 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     include includes/head
-    title Charlieapple
+    title Marketing
   body
     include includes/navbarMain
-    +navbarMain('logo', '')
+    +navbarMain('logo', 'marketing')
     include includes/navbarSecondary
-
-
-    //- +navbarSecondary("marketing", "") 
-    //- include includes/footer
+    +navbarSecondary("marketing", "") 
