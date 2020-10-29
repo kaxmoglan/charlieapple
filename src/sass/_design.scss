@@ -1,0 +1,113 @@
+@use 'colors';
+@use 'responsive';
+
+.design-page {
+  .navbar-secondary {
+    position: sticky;
+    top: 0;
+  }
+  &__main {
+    .welcome {
+      height: calc(100vh - 12rem);
+      width: 100%;
+      padding-top: 10vh;
+
+      &__content {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto 0 auto;
+
+        .heading {
+          font-size: 5rem;
+          font-weight: normal;
+          line-height: 9rem;
+        }
+
+        .body-text {
+          line-height: 3rem;
+          margin-top: 2.5rem;
+          font-size: 1.8rem;
+        }
+
+        .contactBtn {
+          margin-top: 4rem;
+        }
+      }
+    }
+
+    .graphic-design {
+      min-height: calc(100vh - 6rem);
+      width: 100%;
+
+      &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 8rem 2% 5rem 8%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-screen {
+          padding: 8rem 0 5rem 2rem;
+          gap: 2rem;
+        }
+      }
+
+      &__text {
+        h1 {
+          color: colors.$green;
+          font-size: 5rem;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          color: colors.$white;
+          font-size: 2.5rem;
+          margin-bottom: 4rem;
+        }
+        p {
+          color: colors.$white;
+          margin-bottom: 3rem;
+          line-height: 2.4rem;
+        }
+      }
+
+      &__image {
+        height: 100%;
+        margin-top: -3rem;
+
+        @include responsive.medium-screen {
+          margin-top: 13vh;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .recent-clients {
+      width: 100%;
+      padding: 5rem 0 7rem 0;
+
+      &__content {
+        h2 {
+          font-size: 5rem;
+          text-align: center;
+          color: colors.$green;
+          margin-bottom: 4rem;
+        }
+      }
+
+      &__text {
+        margin: 0 auto;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

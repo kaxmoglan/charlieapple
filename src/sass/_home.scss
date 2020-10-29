@@ -52,35 +52,40 @@
   .about-us {
     min-height: 100vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10rem;
-    padding: 14rem 6% 5rem 6%;
 
-    @include responsive.medium-screen {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 10rem;
+      padding: 14rem 6% 5rem 6%;
+      margin: 0 auto;
+      max-width: 1400px;
 
-    .text {
-      .body-text {
-        margin-bottom: 2rem;
+      @include responsive.medium-screen {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
 
-      .headline {
-        margin-bottom: 3rem;
-
-        h1 {
-          font-size: 5rem;
+      .text {
+        .body-text {
+          margin-bottom: 2rem;
         }
-      }
 
-      .contactBtn {
-        margin-left: 40%;
-        margin-top: 3rem;
+        .headline {
+          margin-bottom: 3rem;
 
-        @include responsive.medium-screen {
-          margin-left: 0;
+          .heading {
+            font-size: 5rem;
+          }
+        }
+
+        .contactBtn {
+          margin-left: 40%;
+          margin-top: 3rem;
+
+          @include responsive.medium-screen {
+            margin-left: 0;
+          }
         }
       }
     }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    include includes/head
+    title Design by Charlieapple
+
+  body.design-page
+    include includes/navbarMain
+    +navbarMain("logo", "design")
+    include includes/navbarSecondary
+    +navbarSecondary("design", "")
+
+    main.design-page__main
+
+      section.welcome.gradient-light
+        .welcome__content
+          p.heading Designed
+          p.heading.brushtip by Charlie Apple
+          p.body-text Whether you’re a new business that needs a full brand design, or a long established company that needs a refresh #[a(href="#") contact us] and find out what we can do for you.
+          include includes/contactBtn
+
+      section.graphic-design.gradient-dark
+        .graphic-design__content
+          .graphic-design__text
+            h1 Graphic Design
+            h2 Designs that bring out the best in your business.
+
+            p Graphic design comes in many guises - websites, logos, brochures, company stationery, advertising, fliers, exhibition graphics, roller banners, infographics - the list goes on. Whether you are a new business just starting out that needs a full brand design, or a long established company that needs to refresh some of those tired, old flyers that are knocking about, #[a(href="#") contact us] and find out what we can do for you.
+
+            p We have several graphic designers and once we know the brief, we will marry the right designer to the job. There is no ‘one size fits all’ when it comes to design, each have their own creative flair and personal style, but all are experienced and qualified at what they do. So whether it’s something a bit whacky or very formal that you need, you can be assured that our designers will be able to realise your brief.
+
+          .graphic-design__image
+            img(src="./images/charlieapple-flat-lay.png", alt="Flat lay showcasing digital design and design for print.")
+
+      section.recent-clients.gradient-light
+        .recent-clients__content
+          h2 Recent Clients
+          .recent-clients__text
+            p Cambria Projects
+            p Azadi Acupuncture
+            p Little Olive Company
+            p The Angel's Touch
+            p Nouria
+            p AlphaCare
+            p Gleeson Framers
+            p Fair & Square
+            p Sai Restaurant
+            p Safety Delivery
+            p Flippin Eck'
+            p Ian Dunn Design
+            p Bonita Candles
+            p Accessorise My Garden
+            p Carole's Creperie
+            p Unity of Self
+          
+
+        
+       
+
+
+
+    include includes/footer

@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'responsive';
 
 .navbar-secondary {
   a:hover {
@@ -25,6 +26,13 @@
     height: 100%;
     display: flex;
     align-items: center;
+
+    @include responsive.medium-screen {
+      margin: 0 2rem;
+      p {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   &__link {
@@ -33,6 +41,10 @@
     padding: 1rem;
     position: relative;
     top: 0.1rem;
+
+    @include responsive.medium-screen {
+      padding: 0;
+    }
 
     &.active {
       .underline {

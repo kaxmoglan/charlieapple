@@ -5,6 +5,7 @@
 @use 'footer';
 @use 'contactBtn';
 @use 'home';
+@use 'design';
 
 @font-face {
   font-family: "brushtip";
@@ -48,6 +49,10 @@ h1 {
 
 p {
   font-size: 1.6rem;
+}
+
+.brushtip {
+  font-family: "brushtip", "Roboto", sans-serif;
 }
 
 .gradient-light {

@@ -7,6 +7,7 @@ const pug = require("gulp-pug");
 const jsmin = require("gulp-terser");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
+const { parallel } = require("gulp");
 
 const files = {
   src: {
@@ -54,7 +55,12 @@ function js() {
 function images() {
   return gulp
     .src(files.src.images)
-    .pipe(imagemin())
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.mozjpeg({ quality: 90, progressive: true }),
+      ])
+    )
     .pipe(gulp.dest(files.dest.images));
 }
 
@@ -73,3 +79,4 @@ exports.css = css;
 exports.js = js;
 exports.images = images;
 exports.watch = watch;
+exports.build = parallel(html, css, js, images);
