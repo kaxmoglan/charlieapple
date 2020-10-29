@@ -10,21 +10,6 @@ footer {
     color: colors.$white;
   }
 
-  .copyright {
-    position: relative;
-    bottom: -3rem;
-    color: colors.$white;
-    font-size: 1.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .icon {
-      font-size: 2rem;
-      margin-right: 0.5rem;
-    }
-  }
-
   .content {
     margin: 0 auto;
     max-width: 110rem;
@@ -87,7 +72,7 @@ footer {
   }
 
   .social {
-    &__container {
+    .container {
       display: flex;
       justify-content: center;
 
@@ -96,7 +81,7 @@ footer {
       }
     }
 
-    &__link {
+    .link {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -106,6 +91,10 @@ footer {
       &:hover {
         transform: scale(1.2);
       }
+    }
+
+    #social-fb-icon svg {
+      width: 2.4rem;
     }
   }
 
@@ -146,6 +135,21 @@ footer {
           left: 0;
         }
       }
+    }
+  }
+
+  .copyright {
+    position: relative;
+    bottom: -3rem;
+    color: colors.$white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      font-size: 2rem;
+      margin-right: 0.5rem;
     }
   }
 }

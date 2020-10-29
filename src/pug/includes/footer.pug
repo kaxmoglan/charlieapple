@@ -22,39 +22,34 @@ footer
           a.links__link(href="./testimonials.html")
             p Testimonials
             .underline
-            
-
     .social
       h3 Social
-      .social__container
-        
-        a.social__link(href="http://www.twitter.com" target="_blank")
+      .container
+        a.link(href="http://www.twitter.com" target="_blank")
             include svg/twitter.svg
         
-        a.social__link(href="http://www.facebook.com" target="_blank")
+        a.link(href="http://www.facebook.com" target="_blank" id="social-fb-icon")
           include svg/facebook.svg 
 
-        a.social__link(href="http://www.instagram.com" target="_blank")
+        a.link(href="http://www.instagram.com" target="_blank")
           include svg/instagram.svg 
 
-        a(href="http://www.linkedin.com" target="_blank" class="social__link")
+        a.link(href="http://www.linkedin.com" target="_blank")
           include svg/linkedin.svg 
-
+      
     .contact
       h3 Get in touch
-      
-      .contact__container
-        .contact__phone  
-          include svg/phone.svg
-          a.contact__link(href="tel:+447973987779")
-            p 07973 987 779
-            .underline
+      .contact__phone  
+        include svg/phone.svg
+        a.contact__link(href="tel:+447973987779")
+          p 07973 987 779
+          .underline
 
-        .contact__email  
-          include svg/email.svg
-          a.contact__link(href="mailto:info@charlieapple.com")
-            p info@charlieapple.com
-            .underline
+      .contact__email  
+        include svg/email.svg
+        a.contact__link(href="mailto:info@charlieapple.com")
+          p info@charlieapple.com
+          .underline
 
   .copyright
     p.icon &copy;
