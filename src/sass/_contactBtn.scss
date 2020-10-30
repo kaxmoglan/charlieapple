@@ -3,20 +3,19 @@
 .contactBtn {
   width: 13rem;
   height: 5.5rem;
-  background-color: colors.$green;
-  border: none;
+  background-color: darken(colors.$green, 3%);
   border-radius: 1rem;
   color: colors.$white;
   cursor: pointer;
   transition: all 250ms ease;
-  border: 1px solid darken(colors.$green, 3%);
+  border: none;
   box-shadow: 0.25rem 0.25rem 1rem 0.3rem rgba(37, 37, 37, 0.1);
   p {
     font-size: 1.5rem;
   }
 
   &:hover {
-    background-color: darken(colors.$green, 5%);
+    background-color: colors.$green;
     box-shadow: none;
   }
 }

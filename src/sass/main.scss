@@ -34,7 +34,8 @@ a {
   transition: all 250ms ease;
 
   &:hover {
-    color: darken(colors.$green, 10%);
+    color: lighten(colors.$green, 3%);
+    text-decoration: underline;
   }
 }
 
@@ -57,8 +58,24 @@ p {
 
 .gradient-light {
   background-image: colors.$gradient_light;
+
+  a {
+    color: darken(colors.$green, 5%);
+
+    &:hover {
+      color: lighten(colors.$green, 3%);
+    }
+  }
 }
 
 .gradient-dark {
   background-image: colors.$gradient_dark;
+
+  a {
+    color: lighten(colors.$green, 5%);
+
+    &:hover {
+      color: lighten(colors.$green, 10%);
+    }
+  }
 }

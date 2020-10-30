@@ -102,10 +102,14 @@
         margin: 0 auto;
         max-width: 1000px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
         gap: 2rem;
         p {
           text-align: center;
+        }
+
+        @include responsive.medium-screen {
+          grid-template-columns: repeat(2, minmax(200px, 1fr));
         }
       }
     }
