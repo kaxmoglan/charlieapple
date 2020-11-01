@@ -38,6 +38,7 @@
     .graphic-design {
       min-height: calc(100vh - 6rem);
       width: 100%;
+      overflow-x: hidden;
 
       &__content {
         display: grid;
@@ -113,13 +114,15 @@
         max-width: 1000px;
         display: grid;
         grid-template-columns: repeat(4, minmax(200px, 1fr));
-        gap: 2rem;
+        gap: 3rem 2rem;
         p {
           text-align: center;
         }
 
         @include responsive.medium-screen {
           grid-template-columns: repeat(2, minmax(200px, 1fr));
+          width: 80%;
+          margin: 0 auto;
         }
       }
     }
