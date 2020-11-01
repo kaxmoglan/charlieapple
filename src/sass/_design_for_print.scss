@@ -1,0 +1,61 @@
+@use 'colors';
+@use 'responsive';
+
+.design-for-print {
+  &__main {
+    .from-flyers-to-billboards {
+      width: 100%;
+      height: calc(100vh - 12rem);
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8rem;
+        padding: 15vh 6% 5rem 6%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-lg-screen {
+          gap: 4rem;
+        }
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 0 6% 5rem 6%;
+        }
+
+        header {
+          margin-top: 8vh;
+          .heading {
+            font-weight: normal;
+            font-size: 5.5rem;
+
+            @include responsive.medium-lg-screen {
+              font-size: 4.5rem;
+            }
+
+            .green {
+              color: colors.$green;
+            }
+          }
+          .small {
+            font-size: 1.4rem;
+            margin: 1rem 0 1.5rem 0;
+          }
+        }
+
+        .body-text {
+          line-height: 2.2rem;
+          margin-top: 2vh;
+          font-size: 1.8rem;
+
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

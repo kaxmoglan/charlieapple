@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title Design For Print
+    meta(name="description", content="flyer design, business card design, postcard design, stationary design, leaflet design, magazine design, advert design, brochure design and more")
+
+
+  body.design-for-print
+    include includes/navbarMain
+    +navbarMain("logo", "design")
+    include includes/navbarSecondary
+    +navbarSecondary("design", "design for print")
+
+    main.design-for-print__main
+
+      section.from-flyers-to-billboards.gradient-light
+        .container
+          header
+            h1.heading From flyers<br />
+              span.green to billboards.
+            p.small And everything in between!
+            include includes/contactBtn
+
+          article.body-text
+            p From a business card, to a full size billboard; from an event flyer to a corporate brochure, from packaging to shop signage, we will make sure that your company and your products or services are represented as you want them to be, and that your communication is clear.
+
+            p We can come in at any stage, even if you need us to start from scratch and write the copy for your piece with our #[a(href="#") copywriting service]. If you have the copy written and need a design created for it, then we can do just that.
+
+            p At the next stage, when you’re ready to go to print, we can oversee the project all the way through to delivery to your door. We have a list of suppliers for print that we use regularly and so can pass these on by recommendation to you.  Equally, if you have your own preferred suppliers for print, we can work with them to produce your artwork and meet your deadlines.
+
+            p We’re always on hand to have a chat, so #[a(href="#") give us a call] on 07973 987 779 or #[a(href='#') email us] at info@charlieapple.com or use our #[a(href="#") enquiry form] - whatever your preference.
+
+      section.testimonial-section
+        include includes/svg/charlieapple.svg
+        include includes/svg/quote.svg 
+
+        h2 What our clients say
+        
+        article.testimonial
+          p.testimonial__content Charlie Apple was innovative and efficient in their approach and designed a mailout for me with attractive content which drummed up lots of new business. They are a pleasure to work with and I recommend them very highly.
+          p.testimonial__author Sarah Castle, 
+            span.green Sarah Castle Consultancy Ltd.
+        article.testimonial
+          p.testimonial__content It has been an absolute pleasure working with Charlie Apple on my projects. Their professionalism, efficiency, promptness, expertise and general support is second to none. They were always contactable and answered any questions I had quickly and were patient at times where I was unsure which direction to take with my brand guide and product labels. We were so aligned with our vision of the projects and I was completely blown away by the finished products. I will most definitely be back. Thanks guys!
+          p.testimonial__author Marianne Jones, Founder, 
+            span.green Beauty by M Jones
+        article.testimonial
+          p.testimonial__content I have had the pleasure of working with Charlie Apple on the redesigning of one of our adverts which was due to go out in a local brochure. Their speed and efficiency was top quality, their professional and friendly attitude helped us to work together to get the best results for our practice.  I would highly recommend them to anyone considering marketing ideas.
+          p.testimonial__author Sharon Freer, Practice Manager, 
+            span.green Wimbledon Dental Studio
+
+
+
+
+    include includes/footer

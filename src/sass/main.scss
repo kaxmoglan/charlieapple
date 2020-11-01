@@ -6,11 +6,12 @@
 @use 'contactBtn';
 @use 'home';
 @use 'design';
+@use 'design_for_print';
 
 @font-face {
   font-family: "brushtip";
-  src: url("fonts/btctrial-webfont.woff2") format("woff2"),
-    url("fonts/btctrial-webfont.woff") format("woff");
+  src: url("./fonts/btctrial-webfont.woff2") format("woff2"),
+    url("./fonts/btctrial-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -76,6 +77,75 @@ p {
 
     &:hover {
       color: lighten(colors.$green, 10%);
+    }
+  }
+}
+
+.testimonial-section {
+  width: 100%;
+  padding: 5rem 0;
+  text-align: center;
+  background-color: colors.$white;
+  position: relative;
+
+  .charlieapple-logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15rem;
+    fill: colors.$green;
+
+    @include responsive.medium-lg-screen {
+      width: 10rem;
+    }
+    @include responsive.medium-screen {
+      width: 8rem;
+    }
+  }
+
+  .quote-svg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 20rem;
+    color: rgb(226, 225, 225);
+    @include responsive.medium-lg-screen {
+      width: 15rem;
+    }
+    @include responsive.medium-screen {
+      width: 10rem;
+    }
+  }
+
+  h2 {
+    color: colors.$green;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .testimonial {
+    margin: 3rem auto;
+    width: 50%;
+
+    @include responsive.medium-lg-screen {
+      width: 65%;
+    }
+    @include responsive.medium-screen {
+      width: 80%;
+    }
+
+    &__content {
+      font-size: 1.5rem;
+    }
+
+    &__author {
+      font-weight: bold;
+      font-size: 1.7rem;
+      margin-top: 1rem;
+
+      .green {
+        color: darken(colors.$green, 5%);
+      }
     }
   }
 }

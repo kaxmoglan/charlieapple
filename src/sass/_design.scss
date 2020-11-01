@@ -2,10 +2,6 @@
 @use 'responsive';
 
 .design-page {
-  .navbar-secondary {
-    position: sticky;
-    top: 0;
-  }
   &__main {
     .welcome {
       height: calc(100vh - 12rem);
