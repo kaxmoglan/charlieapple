@@ -20,6 +20,7 @@ const files = {
   dest: {
     main: "./dist",
     images: "./dist/images",
+    js: "./dist/js",
   },
 };
 
@@ -44,11 +45,7 @@ function css() {
 
 // JS
 function js() {
-  return gulp
-    .src(files.src.js)
-    .pipe(concat("script.js"))
-    .pipe(jsmin())
-    .pipe(gulp.dest(files.dest.main));
+  return gulp.src(files.src.js).pipe(jsmin()).pipe(gulp.dest(files.dest.js));
 }
 
 // IMAGES

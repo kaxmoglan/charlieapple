@@ -1,0 +1,1 @@
+const icons=document.querySelectorAll(".icon");icons.forEach(c=>{c.addEventListener("click",()=>{icons.forEach(e=>{c!==e&&e.classList.remove("active")}),c.classList.toggle("active")})});

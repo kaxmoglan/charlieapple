@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin no-hover {
+  @media (hover: none) {
+    @content;
+  }
+}

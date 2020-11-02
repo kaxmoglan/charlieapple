@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title Website Design | Website Development
+    script(src="./js/webDesign.js" defer)
+    meta(name="description", content="website design, website development, shopify development, wordpress development, ecommerce development")
+
+
+  body.website-design
+    include includes/navbarMain
+    +navbarMain("logo", "design")
+    include includes/navbarSecondary
+    +navbarSecondary("design", "website design")
+
+    main.website-design__main
+
+      section.your-business-digital.gradient-light
+        .container
+          article.content
+            header
+              h1 Your business.<br/>
+                span.green Digital.
+            .body-text
+              p We take the time to get to know you, your business, your brand, who your target market is and why they should become your customers. We’ll make sure their journey through your website is a positive experience.  For simple brochure sites, ecommerce or more complex bespoke development…
+            
+            include includes/contactBtn
+
+          .icons
+            .icons__large
+              .icon
+                include includes/svg/shopify.svg
+                p Shopify Development     
+              .icon
+                include includes/svg/wordpress.svg  
+                p Wordpress Development
+            .icons__small
+              .icon 
+                include includes/svg/css3.svg    
+                p CSS 3 Development
+              .icon
+                include includes/svg/js.svg    
+                p Javascript Development
+              .icon
+                include includes/svg/html5.svg   
+                p HTML 5 Development
+
+      section.the-process
+        h2 The Process
+
+        .container 
+          article#talk 
+            header
+              h3 1. You talk. 
+                span.green We listen.
+              p.body-text On the phone or in a video chat. We get some background from you, where you are now, where you want to be, what you want your site to achieve, identify your target audience, and discuss your timescales.               
+          
+          article#questionnaire 
+            header
+              h3 2. The Questionnaire
+              p.body-text You can fill in some of it or all of it, it’s up to you, but it will help you think through the site structure, navigation, look and feel and will form the client brief or website specification. Before completing the questionnaire, you may find it useful to #[a(href="#") read our paper] on Writing Your Website Brief.               
+          
+          article#quote 
+            header
+              h3 3. The Quote
+              p.body-text Based on your specification, we can then give you a fixed price for your website. If you require a phased approach to your website, either for cost reasons or to support the evolution of your business, the price will also be given to match each phase, so you can plan both financially and strategically.    
+
+          article#template 
+            header
+              h3 4. The Template
+              p.body-text We produce a template for your new site, reflecting your design specification, for you to approve. We’ll make the necessary design changes and fine tune it until you are happy. We then produce all the pages of the website based on the approved template, ready for the content to be added.            
+          
+          article#seo 
+            header
+              h3 5. Build, Test & SEO
+              p.body-text Now it all comes together. All your words, pictures and products go where they belong, with SEO taken care of.  The site is proofread, links are checked, for ecommerce sites, transactions are tested.
+          
+          article#live 
+            header
+              h3 6. Go Live!
+              p.body-text You will get to review and approve your new site before you give the go-ahead to go live!  And then we’ll stay with you for one month to make any tweaks and adjustments that you need.
+
+      
+            
+    include includes/footer
