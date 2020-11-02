@@ -5,7 +5,7 @@
   &__main {
     .from-flyers-to-billboards {
       width: 100%;
-      height: calc(100vh - 12rem);
+      min-height: calc(100vh - 12rem);
 
       .container {
         display: grid;
@@ -27,7 +27,11 @@
         }
 
         header {
-          margin-top: 8vh;
+          margin-top: 2vh;
+
+          @include responsive.medium-screen {
+            margin-top: 5vh;
+          }
           .heading {
             font-weight: normal;
             font-size: 5.5rem;

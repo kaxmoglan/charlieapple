@@ -15,7 +15,7 @@ const files = {
     pugIncludes: "./src/pug/includes/*",
     sass: "./src/sass/**/*.scss",
     js: "./src/js/**/*.js",
-    images: "./src/images/*",
+    images: "./src/images/**/*",
   },
   dest: {
     main: "./dist",

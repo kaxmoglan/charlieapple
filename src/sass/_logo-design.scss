@@ -1,0 +1,179 @@
+@use 'colors';
+@use 'responsive';
+
+.logo-design {
+  &__main {
+    .your-brand-identity {
+      width: 100%;
+      min-height: calc(100vh - 12rem);
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8rem;
+        padding: 15vh 6% 5rem 6%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-lg-screen {
+          gap: 3rem;
+        }
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 5vh 10% 5rem 10%;
+        }
+
+        header {
+          margin-top: 2vh;
+
+          .heading {
+            margin-bottom: 3rem;
+
+            h1 {
+              font-size: 5.5rem;
+              font-weight: normal;
+              margin-bottom: 1rem;
+
+              @include responsive.medium-lg-screen {
+                font-size: 4.5rem;
+              }
+            }
+
+            h2 {
+              font-size: 3.5rem;
+              font-weight: normal;
+              color: colors.$green;
+
+              @include responsive.medium-lg-screen {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+
+        .body-text {
+          line-height: 2.5rem;
+          margin-top: 2vh;
+          font-size: 1.8rem;
+
+          p {
+            margin-bottom: 2rem;
+          }
+
+          h3 {
+            color: colors.$green;
+            font-weight: normal;
+            font-size: 2rem;
+            margin: 3rem 0 1rem 0;
+          }
+        }
+      }
+    }
+
+    .start-here {
+      width: 100%;
+      color: colors.$white;
+      padding: 5rem;
+
+      @include responsive.medium-lg-screen {
+        padding: 5rem 0 5rem 0;
+      }
+
+      @include responsive.medium-screen {
+        padding: 5rem 0 5rem 0;
+      }
+
+      h2 {
+        font-size: 5rem;
+        color: colors.$green;
+        text-align: center;
+      }
+
+      .container {
+        margin: 3rem 6% 3rem 6%;
+        max-width: 1400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 8rem;
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+        }
+
+        article {
+          display: grid;
+          grid-template-columns: 1fr 5fr;
+          gap: 3rem;
+
+          .icon {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              color: colors.$green;
+              width: 7rem;
+            }
+          }
+
+          #cost-svg {
+            width: 6rem;
+          }
+
+          .title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+          }
+
+          .body {
+            font-size: 1.4rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+
+    .previous-work {
+      background-color: colors.$white;
+      width: 100%;
+      padding: 5rem;
+
+      h2 {
+        font-size: 5rem;
+        color: colors.$green;
+        text-align: center;
+        margin-bottom: 5rem;
+      }
+
+      .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem 10rem;
+        max-width: 1050px;
+        margin: 0 auto;
+
+        .logo {
+          height: 100%;
+          width: 100%;
+          flex: 0 1 200px;
+          transition: all 500ms ease;
+
+          &:hover {
+            transform: scale(1.3);
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

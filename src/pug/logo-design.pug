@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title Logo Design
+    meta(name="description", content="logo design")
+
+
+  body.logo-design
+    include includes/navbarMain
+    +navbarMain("logo", "design")
+    include includes/navbarSecondary
+    +navbarSecondary("design", "logo design")
+
+    main.logo-design__main
+
+      section.your-brand-identity.gradient-light
+        .container
+          header
+            .heading
+              h1 Logo Design
+              h2 Your brand identity.
+            include includes/contactBtn
+
+          article.body-text
+            p The possibilities for your logo are truly limitless. The start point is the company name. From there, it just gets crazy. A gazillion fonts to choose from, any and all colours to choose from for your logotype and logo mark. Then you have to think about the positioning - if there’s more than one word do they link up or line up, are they in the same fonts, the same colours, the same size?  Do we have a logomark and if so, what shape, what colour, what size, where should it go? Should it be symmetrical, asymmetrical or radial? You can see how mind blowing the possibilities are.
+
+            h3 So where do you begin?
+
+            p Well, you can start by #[a(href="tel:+447973987779") giving us a call], or scroll down to read a few things for you to think about.
+
+      section.start-here.gradient-dark
+        h2 Start Here
+        
+        .container 
+          article#colour
+            .icon
+              include includes/svg/palette.svg
+            .content
+              h3.title Colour
+              p.body Most clients come to us with an idea of colour they want to use. If you haven’t decided on a colour, we can help once we know a little bit about your business, your clients and your company ethos. We can work on a colour palette which you can then use throughout your branding.
+
+          article#fonts
+            .icon
+              include includes/svg/font.svg
+            .content
+              h3.title Fonts
+              p.body You could have a look at some fonts online to get an idea of the style you may want. A great resource is #[a(href="http://www.dafont.com" target="_blank") www.dafont.com] where you can type in your text (ie. company name) and then see what it looks like in all the many different fonts.  You can then tell us an exact font to use, or a style that you like (eg. modern, serif) and leave the choosing to us!
+          
+          article#size
+            .icon
+              include includes/svg/ruler.svg
+            .content
+              h3.title One size doesn't fit all
+              p.body Your logo has to look great in all sizes from a billboard to a business card. We’ve seen some beautiful logos but when reduced in size all the finer detail is lost. Many clients have a vision in their head, whether they realise it or not, and part of our job is to extract that vision from you and turn it into something real.
+          
+          article#logomark
+            .icon
+              include includes/svg/shapes.svg
+            .content
+              h3.title Logomark
+              p.body There are swirls, lines, geometric shapes, globes, trees, symbols, illustrations, again, it’s pretty endless. You don’t have to have one - many don’t - but if you do, think about whether you have a particular shape or graphic in mind or, conversely, anything you particularly hate and don’t want!  Remember, some companies become famous on the logo mark alone - who doesn’t recognise the tick as Nike?!
+          
+          article#cost
+            .icon
+              include includes/svg/pound.svg
+            .content
+              h3.title Cost
+              p.body Every project is bespoke and will depend on how much instruction is given by you vs. how much creative planning time is needed and how many concepts or colour ways are required. We’ll tell you how much before we start - there’ll be no hidden surprises.  Prices start at £200.
+      
+
+      section.previous-work.gradient-light
+        h2 Previous Work
+        .container 
+          .logo
+            img(src="./images/logo-portfolio/little-olive.png", alt="logo design for Little Olive")
+          .logo
+            img(src="./images/logo-portfolio/azadi.png", alt="logo design for Little Olive")
+          .logo
+            img(src="./images/logo-portfolio/mayrose.png", alt="logo design for Mayrose Care Services")
+          .logo
+            img(src="./images/logo-portfolio/angels-touch.png", alt="logo design for The Angel's Touch ")
+          .logo
+            img(src="./images/logo-portfolio/balloon-design-studio.png", alt="logo design for Balloon Design Studio")
+          .logo
+            img(src="./images/logo-portfolio/kendi-accessories.png", alt="logo design for Kendi Accessories")
+          .logo
+            img(src="./images/logo-portfolio/maggies-diner.png", alt="logo design for Maggie's Diner")
+      
+            
+    include includes/footer

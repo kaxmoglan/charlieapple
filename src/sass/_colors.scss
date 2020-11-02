@@ -11,6 +11,30 @@ $gradient_light: linear-gradient(
 
 $gradient_dark: linear-gradient(
   315deg,
-  rgba(54, 54, 54, 1) 0%,
-  rgb(83, 83, 83) 100%
+  rgb(48, 47, 47) 0%,
+  rgb(78, 78, 78) 100%
 );
+
+.gradient-light {
+  background-image: $gradient_light;
+
+  a {
+    color: darken($green, 5%);
+
+    &:hover {
+      color: lighten($green, 3%);
+    }
+  }
+}
+
+.gradient-dark {
+  background-image: $gradient_dark;
+
+  a {
+    color: lighten($green, 5%);
+
+    &:hover {
+      color: lighten($green, 10%);
+    }
+  }
+}
