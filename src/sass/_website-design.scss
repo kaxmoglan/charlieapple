@@ -100,12 +100,12 @@
               @mixin large-hover-state {
                 svg {
                   transform: translateY(-2rem);
-                  color: darken(colors.$green, 5%);
+                  color: colors.$dark_green;
                 }
                 p {
                   transform: translateY(0);
                   opacity: 1;
-                  color: darken(colors.$green, 5%);
+                  color: colors.$dark_green;
                 }
               }
 
@@ -144,12 +144,12 @@
               @mixin small-hover-state {
                 svg {
                   transform: translateY(-1rem);
-                  color: darken(colors.$green, 5%);
+                  color: colors.$dark_green;
                 }
                 p {
                   transform: translateY(0);
                   opacity: 1;
-                  color: darken(colors.$green, 5%);
+                  color: colors.$dark_green;
                 }
               }
 
@@ -195,11 +195,11 @@
             font-size: 2.2rem;
             margin-bottom: 1rem;
             .green {
-              color: darken(colors.$green, 5%);
+              color: colors.$dark_green;
             }
           }
           a {
-            color: darken(colors.$green, 5%);
+            color: colors.$dark_green;
 
             &:hover {
               color: colors.$green;
