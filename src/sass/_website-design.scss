@@ -166,5 +166,105 @@
         }
       }
     }
+
+    .the-process {
+      width: 100%;
+      background-color: colors.$white;
+      padding: 5rem;
+
+      h2 {
+        color: colors.$green;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+
+      .container {
+        margin: 3rem auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem 8rem;
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        article {
+          .title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            .green {
+              color: darken(colors.$green, 5%);
+            }
+          }
+          a {
+            color: darken(colors.$green, 5%);
+
+            &:hover {
+              color: colors.$green;
+            }
+          }
+        }
+      }
+    }
+
+    .more-services {
+      width: 100%;
+      padding: 5rem;
+      color: colors.$white;
+
+      h2 {
+        color: colors.$green;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+
+      .container {
+        margin: 3rem auto;
+        max-width: 1200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 6rem 8rem;
+
+        #domain .icon svg,
+        #video .icon svg {
+          width: 7rem;
+        }
+
+        .service {
+          flex: 1 1 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          text-align: center;
+          align-items: center;
+
+          .icon {
+            width: 300px;
+            height: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+              width: 6rem;
+              color: colors.$green;
+            }
+          }
+
+          .title {
+            font-size: 2rem;
+          }
+
+          .body-text {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
   }
 }
