@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title Events by Charlie Apple
+    meta(name="description", content="event management, corporate events, awards ceremonies, street markets, food markets, art markets")
+
+
+  body.events
+    include includes/navbarMain
+    +navbarMain("logo", "events")
+    include includes/navbarSecondary
+    +navbarSecondary("events", "")
+
+    main.events__main
+
+      section.events-by-charlieapple.gradient-light
+        .container
+          header
+            h1.heading Events<br />
+              span.brushtip by Charlie Apple
+            include includes/contactBtn
+
+          article.body-text
+            p Event production and management for outdoor public events, seasonal events, exhibitions, conferences, seminars, workshops, AGMs, product launches, award ceremonies, live streaming and more. 
+
+      section.testimonial-section
+        include includes/svg/charlieapple.svg
+        include includes/svg/quote.svg 
+
+        h2 What our clients say
+        
+        article.testimonial
+          p.testimonial__content After working with Charlie Apple for many years on numerous events I can wholeheartedly recommend them to anyone needing top notch event and production management.  They have all the experience needed to put together and run any event either in-doors or out. They’re professional, friendly to all and passionate about their work. True professionals.
+          p.testimonial__author Alan Trewhitt, MD, 
+            span.green AT Sound
+
+        article.testimonial
+          p.testimonial__content On behalf of all of us on the FT team, I’d like to express our sincere thanks for all you have done to make UnCon the success it was. Without exception, every speaker (and anyone else whose affairs you organised) who talked to me was full of praise for your speed, attention to detail and readiness to help at odd hours. I hope IFG hire you for next year’s event. Thanks again!
+          p.testimonial__author Bob Rickard, Editor, 
+            span.green Fortean Times
+
+        article.testimonial
+          p.testimonial__content Charlie Apple helped to manage several events for Mosaic Languages and organised our marketing communications and strategy planning. I greatly value their input. We are now also using them for our website design and updating. I would not hesitate to recommend them.
+          p.testimonial__author Corinne Gauthier-Capes, Director, 
+            span.green Mosaic Langauges
+
+
+
+
+    include includes/footer

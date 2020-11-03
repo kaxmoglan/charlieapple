@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title event management, conference organiser, event organiser
+    meta(name="description", content="event management, conference organiser, event organiser, corporate events, awards ceremonies, street markets, food markets, art markets")
+
+
+  body.event-management
+    include includes/navbarMain
+    +navbarMain("logo", "events")
+    include includes/navbarSecondary
+    +navbarSecondary("events", "event management")
+
+    main.event-management__main
+
+      section.title-section.gradient-light
+        .container
+          header
+            h1.heading Event<br />
+              span.green Management
+            include includes/contactBtn
+
+          .image
+            img(src="./images/event-management.jpg", alt="a business event with a large audience, a stage and a big screen")
+
+      section.ribbon.gradient-dark
+        include includes/svg/charlieapple.svg
+        p We can organise part of it, most of it or all of it! The success of an event is dependent on scrupulous planning, organisation and control. If you do not have the resources or expertise in-house to guarantee a successful event, then we can do the job for you. 
+
+      section.services.gradient-light
+        h1 Event Management Services 
+        h2 include any or all of the following:
+
+        .container
+          article
+            h3 Venue and menu selection and liaison
+            p We will find the right venue for your event and select the right menus for your guests. We will make all the arrangements with the venue including equipment hire, staffing, catering, acoustics, access, storage, parking, set-up and break-down, and make sure your event runs smoothly. 
+          article 
+            h3 Event Design & Production
+            p Once we have your brief, we will come back to you with ideas and concepts to fit the brief. We will design your event to the last detail, from the big things (staging, lighting, audio) to the smaller things (place cards and pens). We can create glamour and glitz, formal and fancy or fun and games and we will bring all the elements together for you. 
+          article 
+            h3 Travel and Accommodation
+            p If your event is a distance away, or your delegates or speakers are coming from far and wide, we can organise all travel, whether overseas or national, from flights to train tickets and taxis. We will see to their every whim, from extra large beds to vegan dietary requirements. We aim to make their life easy, which can only reflect favourably on your business. We remain completely accessible, at odd hours so time differences present no problem to us.
+          article 
+            h3 Staff and Speaker Briefings
+            p Pulling it all together at the end, just before kick-off, with run-throughs and/or briefings will mean that everyone knows not only what they are doing, but what others are doing too, and how their role fits into the big picture of the event. In our experience, this avoids ‘headless chicken’ syndrome and ‘tail chasing’ activities at the eleventh hour when stress levels can run high. We, of course, stay calm and cool.
+          article 
+            h3 Project & Financial Management
+            p Event budgets, like any other budget, can quickly spiral out of control if not planned and managed properly. We will carefully plan your budget with you, making sure all the forgotten costs that can sting later on, are taken into account. We’ll build in milestones so that you can take appropriate action as and when you need to. Whether your event is a meeting for 10 or an exhibition for 2000, your project and financial plan will become the backbone of your event.
+          article 
+            h3 Graphic Design & Copywriting
+            p Whatever marketing collateral you are producing for your event - folders, brochures, flyers, leaflets, posters, banners, signage, handouts, promotional gifts - we can provide all the graphic design, as well as the copywriting, through to print and delivery. 
+
+      section.need-us
+        .container 
+          header
+            h2 When you might<br/>
+              span.green need us 
+          
+          .points
+            .point
+              p.number 1.
+              p.text When you’ve got an idea for an event that you want to run but no idea where to start
+            .point
+              p.number 2.
+              p.text When you’ve got an event running but it’s not getting the attendance it deserves
+            .point
+              p.number 3.
+              p.text When you’ve got an event planned but you don’t have the staff to manage it
+            .point
+              p.number 4.
+              p.text When you’ve got part of an event planned but need help to expand it
+
+
+
+
+    include includes/footer
