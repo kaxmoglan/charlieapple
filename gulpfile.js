@@ -55,7 +55,7 @@ function images() {
     .pipe(
       imagemin([
         imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.mozjpeg({ quality: 90, progressive: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
       ])
     )
     .pipe(gulp.dest(files.dest.images));
