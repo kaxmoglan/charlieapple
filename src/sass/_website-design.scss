@@ -137,7 +137,7 @@
               justify-content: center;
 
               p {
-                bottom: -4rem;
+                bottom: -3rem;
                 text-align: center;
               }
 
@@ -147,7 +147,7 @@
                   color: colors.$dark_green;
                 }
                 p {
-                  transform: translateY(0);
+                  transform: translateY(0rem);
                   opacity: 1;
                   color: colors.$dark_green;
                 }
@@ -457,9 +457,14 @@
             }
           }
 
-          &:hover,
-          &.active {
+          &:hover {
             @include overlay-hover-state;
+          }
+
+          @include responsive.no-hover {
+            &.active {
+              @include overlay-hover-state;
+            }
           }
         }
       }
