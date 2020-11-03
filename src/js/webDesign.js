@@ -10,6 +10,18 @@ icons.forEach((icon) => {
   });
 });
 
+// PREVIOUS WORK COMING SOON ROLLOVERS ON CLICK FOR TOUCH SCREENS
+const comingSoon = document.querySelectorAll(".coming-soon");
+
+comingSoon.forEach((e) => {
+  e.addEventListener("click", () => {
+    comingSoon.forEach((i) => {
+      if (e !== i) i.classList.remove("active");
+    });
+    e.classList.toggle("active");
+  });
+});
+
 // PORTFOLIO GSAP
 let tl = gsap.timeline({
   scrollTrigger: {
