@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title copywriting services, freelance copywriter, proofreading services
+    meta(name="description", content="copywriting services, proofreading services, freelance")
+
+
+  body.copywriting
+    include includes/navbarMain
+    +navbarMain("logo", "marketing")
+    include includes/navbarSecondary
+    +navbarSecondary("marketing", "copywriting")
+
+    main.copywriting__main
+
+      section.copywriting-proofreading.gradient-light
+        .container
+          header
+            h1.heading Copywriting<br />
+              span.green & Proofreading
+            include includes/contactBtn
+
+          article.body-text
+            h2 Copywriting in your chosen style, written for your target audience. 
+            h2.green Use us for your next campaign or when you're under resourced.
+            h2 Proofreading services for any of your written publications.
+
+            p We don’t just start writing. We review your image and branding to ensure its integrity, analyse the target audience and ensure we follow the brief. If you don’t have one, we’ll do that too! We make sure we understand completely what you want to say, who you’re saying it to and why you’re saying it, before we write a word.
+
+            p Sometimes, an internal person is just too close to the product or the business to write objectively and simply. Sometimes, they’re just too technical and cannot write in layman’s terms because they know too much! That’s where we come in - no, not that we don’t know anything - just that we are fresh ears and eyes to your product or service.
+
+            p We can follow this service through to design and print production, negotiating the best printing deals for you.
+
+            h3 It’s already written but it’s not hitting the spot…
+
+            p We can still help. We don’t have to start from a blank page, we’re equally happy to give your pre-written copy the once-over, revise it and send back a revised version. As we charge in 30 minute blocks, it won’t cost you an arm and a leg either.
+
+            p We also run a #[a(href="#") training workshop] “Writing Done Right”.
+          
+
+      section.testimonial-section
+        include includes/svg/charlieapple.svg
+        include includes/svg/quote.svg 
+
+        h2 What our clients say
+        
+        article.testimonial
+          p.testimonial__content Thank you for all the help and support. It’s been fantastic working with you. I am delighted with your work and your level of commitment.
+          p.testimonial__author Edvaldo Santos, Owner, 
+            span.green Back2Cleaning
+
+        article.testimonial
+          p.testimonial__content Thank you very much, great job! The style and content is just perfect!
+          p.testimonial__author Piotr Bednarczyk, 
+            span.green CV Ghostwriters
+        
+        article.testimonial
+          p.testimonial__content Great work - very thorough! Gosh - you picked up so many mistakes. It’s amazing how much I missed!
+          p.testimonial__author Marja-Leena Toseland, 
+            span.green Darling Magazine
+
+
+
+
+    include includes/footer

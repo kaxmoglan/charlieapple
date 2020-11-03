@@ -1,0 +1,92 @@
+@use 'colors';
+@use 'responsive';
+
+.copywriting {
+  &__main {
+    .copywriting-proofreading {
+      width: 100%;
+      min-height: calc(100vh - 12rem);
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 8rem;
+        padding: 7vh 6% 5rem 6%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-lg-screen {
+          padding: 4vh 6% 5rem 6%;
+        }
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 0 6% 5rem 6%;
+        }
+
+        header {
+          margin-top: 35%;
+
+          @include responsive.medium-lg-screen {
+            margin-top: 13vh;
+          }
+
+          @include responsive.medium-screen {
+            margin-top: 5vh;
+          }
+          .heading {
+            font-weight: normal;
+            font-size: 5.5rem;
+            margin-bottom: 2rem;
+
+            @include responsive.medium-lg-screen {
+              font-size: 4.5rem;
+            }
+
+            .green {
+              font-size: 4rem;
+              color: colors.$green;
+
+              @include responsive.medium-lg-screen {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+
+        .body-text {
+          line-height: 2.2rem;
+          margin-top: 2vh;
+
+          h2 {
+            font-weight: normal;
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+
+            @include responsive.medium-lg-screen {
+              font-size: 2rem;
+            }
+          }
+
+          .green {
+            color: colors.$dark_green;
+          }
+
+          p {
+            margin: 2rem 0;
+            font-size: 1.5rem;
+          }
+
+          h3 {
+            font-size: 2rem;
+            color: colors.$dark_green;
+            font-weight: normal;
+            margin: 3rem 0;
+          }
+        }
+      }
+    }
+  }
+}
