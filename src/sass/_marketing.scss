@@ -1,0 +1,62 @@
+@use 'colors';
+@use 'responsive';
+
+.marketing {
+  &__main {
+    .welcome {
+      height: calc(100vh - 12rem);
+      width: 100%;
+      padding-top: 10vh;
+
+      &__content {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto 0 auto;
+
+        .heading {
+          font-size: 5rem;
+          font-weight: normal;
+          line-height: 9rem;
+        }
+
+        .body-text {
+          line-height: 3rem;
+          margin-top: 2.5rem;
+          font-size: 1.8rem;
+        }
+
+        .contactBtn {
+          margin-top: 4rem;
+        }
+      }
+    }
+
+    .recent-clients {
+      width: 100%;
+      padding: 5rem 0 7rem 0;
+      background-color: colors.$white;
+
+      h2 {
+        font-size: 5rem;
+        text-align: center;
+        color: colors.$green;
+        margin-bottom: 4rem;
+      }
+
+      &__container {
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem 2rem;
+
+        p {
+          text-align: center;
+          flex: 0 0 200px;
+        }
+      }
+    }
+  }
+}

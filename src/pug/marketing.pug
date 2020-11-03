@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 html(lang="en")
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     include includes/head
     title Marketing
-  body
+  body.marketing
     include includes/navbarMain
     +navbarMain('logo', 'marketing')
     include includes/navbarSecondary
     +navbarSecondary("marketing", "") 
+
+
+    main.marketing__main
+
+      header.welcome.gradient-light
+        .welcome__content
+          p.heading Marketing
+          p.heading.brushtip by Charlie Apple
+          p.body-text Making your brand a success story.
+          include includes/contactBtn
+
+      section.recent-clients
+        h2 Recent Clients
+        .recent-clients__container
+          p Venue 28
+          p Bonita Candles
+          p Northskull
+          p Lu-Ma Cafe
+          p Milner School of English
+          p Cleo Clinic
+          p Bertie's Wine Bar
+          p Wimbledon Pilates Clinic
+          p Hey Lovely Buns
+          p Mosaic Languages
+          p Aeonian Venues
+          p Ian Dunn Design
+          p Noura London
+          p Angel's Touch
+          p Carole's Creperie
+          p Unity of Self
+
+    include includes/footer
