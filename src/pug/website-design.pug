@@ -2,8 +2,11 @@
 html(lang="en")
   head
     include includes/head
-    title Website Design | Website Development
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" defer)
     script(src="./js/webDesign.js" defer)
+
+    title Website Design | Website Development
     meta(name="description", content="website design, website development, shopify development, wordpress development, ecommerce development")
 
 
@@ -113,6 +116,21 @@ html(lang="en")
             h3.title Video Training
             p.body-text We can provide you with screen recorded video/audio training to show you how to edit your website.  These training videos are recorded using the content management system of your website so is unique to your website. 
 
-      
+      section.portfolio.gradient-light
+        h2 Portfolio
+
+        #portfolio-container
+          img#computer(src="./images/website-design/computer.jpg", alt="a computer setup on a desk")
+          #screen
+            #turn-on
+              img#laborjee(src="./images/website-design/laborjee.jpg", alt="a website design mockup")
+              img#olive(src="./images/website-design/little-olive.jpg", alt="a website design mockup")
+              img#azadi(src="./images/website-design/azadi.jpg", alt="a website design mockup")
+              img#creperie(src="./images/website-design/creperie.jpg", alt="a website design mockup")
+            #turn-off
+              include includes/svg/charlieapple.svg
+
+
+
             
     include includes/footer
