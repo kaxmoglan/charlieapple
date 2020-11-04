@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title freelance marketing consultant, hire a freelancer, marketing freelancer, web consultancy
+    meta(name="description", content="copywriting services, proofreading services, freelance, ")
+
+
+  body.social-media
+    include includes/navbarMain
+    +navbarMain("logo", "marketing")
+    include includes/navbarSecondary
+    +navbarSecondary("marketing", "social media")
+
+    main.social-media__main
+
+      section.strategy-management.gradient-light
+        .container
+          header
+            h1 Social Media
+            h2 Strategy.<br/>Management.
+            include includes/contactBtn
+
+          article.body-text
+            p Love it or hate it, you cannot escape it. If you’re in business, you need to embrace and engage and have that conversation on social media. You don’t need to be on everything that’s out there, but you do need to find the platforms that are best suited for you and your business and maximise the potential of social media. We can steer you in the right direction with a social media strategy for you to implement, or we can fully manage your social media campaigns for you.
+
+            h3 New to social media?
+
+            p If you don’t know whether you should be tweeting, posting, boosting, scheduling, pinning, following, liking or linking - and if the statement ‘what is it all about?’ resontates with you, then we can help. Our flexible approach means you that you can book us for anything from a 1hr consultation to a full day’s training session.  We can also get you started by setting up your accounts and profiles, writing your bio and developing your hashtags for your chosen platforms, so you are on your way.
+
+            p #[a(href="#") Contact us] to find out how we can help your business make the most out of social media. 
+          
+
+        .icons
+          .icon
+            include includes/svg/snapchat.svg
+            p.text Snapchat Management
+          .icon
+            include includes/svg/tiktok.svg
+            p.text TikTok Management
+          .icon
+            include includes/svg/facebook.svg 
+            p.text Facebook Management
+          .icon
+            include includes/svg/twitter.svg
+            p.text Twitter Management
+          .icon
+            include includes/svg/instagram.svg
+            p.text Instagram Management
+          .icon
+            include includes/svg/linkedin.svg
+            p.text LinkedIn Management
+          .icon
+            include includes/svg/pinterest.svg
+            p.text Pinterest Management
+
+
+
+    include includes/footer

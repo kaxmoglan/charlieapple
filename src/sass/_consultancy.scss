@@ -1,0 +1,65 @@
+@use 'colors';
+@use 'responsive';
+
+.consultancy {
+  &__main {
+    .marketing-consultancy {
+      width: 100%;
+      min-height: calc(100vh - 12rem);
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+        padding: 7vh 6% 5rem 6%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 0 6% 5rem 6%;
+        }
+
+        header {
+          margin-top: 20%;
+
+          h1 {
+            font-weight: normal;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+          }
+
+          h2 {
+            font-size: 3.5rem;
+            margin-bottom: 3rem;
+            font-weight: normal;
+            color: colors.$green;
+
+            @include responsive.medium-lg-screen {
+              font-size: 3rem;
+            }
+          }
+        }
+
+        .body-text {
+          line-height: 2.2rem;
+          margin-top: 10%;
+
+          h3 {
+            font-weight: normal;
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+            color: colors.$dark_green;
+          }
+
+          p {
+            margin: 2rem 0;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

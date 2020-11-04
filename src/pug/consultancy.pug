@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title freelance marketing consultant, hire a freelancer, marketing freelancer, web consultancy
+    meta(name="description", content="copywriting services, proofreading services, freelance, ")
+
+
+  body.consultancy
+    include includes/navbarMain
+    +navbarMain("logo", "marketing")
+    include includes/navbarSecondary
+    +navbarSecondary("marketing", "consultancy")
+
+    main.consultancy__main
+
+      section.marketing-consultancy.gradient-light
+        .container
+          header
+            h1 Marketing Consultancy
+            h2 Branding & Marketing Strategy
+            include includes/contactBtn
+
+          article.body-text
+            h3 Planning your marketing communications, product positioning, branding and marketing strategy
+
+            p Our marketing consultancy service is very flexible to fit in with what you need, when you need it.  We offer 1 to 1 sessions, via Zoom or in person, as a one off or as a series of sessions designed to take you through a project.  These sessions are tailored to exactly where you are with your business and what you want to achieve by the end of the session.  
+
+            p For longer term and larger projects, we can work with you to develop your brand and marketing strategy, as well as product/service development and launches to take your business forward.
+          
+
+      section.testimonial-section
+        include includes/svg/charlieapple.svg
+        include includes/svg/quote.svg 
+
+        h2 What our clients say
+        
+        article.testimonial
+          p.testimonial__content I first met dealt with Charlie Apple whilst working at a promotional event in Wimbledon. From the first meeting I knew they would be easy to work with. They would listen attentively, offer advice and share their marketing experience. Since our meet, I have asked them to assist me with a couple of promotional projects for my business which is new and growing. As time is so valuable when starting out, I really appreciated that we didn’t need to discuss the work for hours and we didn’t have too many proofs backward and forward. This for me is a real testament to their focus and expertise along with their years of marketing experience, they just dealt with the ‘job in hand’.  Their attention to detail and desire to meet the needs of their clientele ensure that they provides a service which is efficient and  professional. Thank you guys!
+          p.testimonial__author Maria Jessiman, Owner, 
+            span.green Lu-Ma Cafe
+
+        article.testimonial
+          p.testimonial__content I have had the pleasure of working with Charlie Apple on the redesigning of one of our adverts which was due to go out in a local brochure. The speed and efficiency they showed was top quality, their professional and friendly attitude helped us to work together to get the best results for our practice.  I would highly recommend Charlie Apple to anyone considering marketing ideas.
+          p.testimonial__author Sharon Freer, Practice Manager, 
+            span.green Wimbledon Dental Studio
+        
+        article.testimonial
+          p.testimonial__content Charlie Apple helped to manage several events for Mosaic Languages and organised our marketing communications and strategy planning. I greatly value their input. We are now also using Charlie Apple for our website design and updating. I would not hesitate to recommend them.
+          p.testimonial__author Corinne Gauthier-Capes, Director, 
+            span.green Mosaic Langauges
+
+
+
+
+    include includes/footer

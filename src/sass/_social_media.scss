@@ -1,0 +1,136 @@
+@use 'colors';
+@use 'responsive';
+
+.social-media {
+  &__main {
+    .strategy-management {
+      width: 100%;
+      min-height: calc(100vh - 12rem);
+      position: relative;
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8rem;
+        padding: 7vh 6% 5rem 6%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-lg-screen {
+          padding-top: 4vh;
+        }
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 0 6% 5rem 6%;
+        }
+
+        header {
+          margin-top: 15%;
+
+          @include responsive.medium-lg-screen {
+            margin-top: 35%;
+          }
+
+          @include responsive.medium-screen {
+            margin-top: 10%;
+          }
+
+          h1 {
+            font-weight: normal;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+
+            @include responsive.medium-lg-screen {
+              font-size: 4rem;
+            }
+          }
+
+          h2 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            font-weight: normal;
+            color: colors.$green;
+
+            @include responsive.medium-lg-screen {
+              font-size: 3rem;
+            }
+          }
+        }
+
+        .body-text {
+          line-height: 2.2rem;
+          margin-top: 0;
+
+          h3 {
+            font-weight: normal;
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+            color: colors.$dark_green;
+          }
+
+          p {
+            margin: 2rem 0;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .icons {
+        width: 100%;
+        position: absolute;
+        bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .icon {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          svg {
+            width: 4rem;
+            transition: all 500ms ease;
+
+            @include responsive.medium-lg-screen {
+              width: 3rem;
+            }
+          }
+
+          .text {
+            position: absolute;
+            bottom: 0;
+            font-size: 1.4rem;
+            text-align: center;
+            transform: translateY(-1rem);
+            opacity: 0;
+            transition: all 350ms ease;
+
+            @include responsive.medium-screen {
+              font-size: 1.2rem;
+            }
+          }
+
+          &:hover,
+          &:active {
+            svg {
+              transform: translateY(-2rem);
+              color: colors.$green;
+            }
+            .text {
+              transform: translateY(1rem);
+              color: colors.$dark_green;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
