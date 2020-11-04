@@ -39,13 +39,17 @@
           color: colors.$green;
           margin-bottom: 3rem;
         }
-        p {
+        .fee {
           margin: 2rem 0;
           line-height: 2rem;
         }
         .green {
           color: colors.$dark_green;
         }
+      }
+
+      .contactBtn {
+        margin-top: 2rem;
       }
     }
   }
