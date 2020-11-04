@@ -6,55 +6,28 @@
     .events-by-charlieapple {
       width: 100%;
       min-height: calc(100vh - 12rem);
+      padding-top: 10vh;
 
-      .container {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        gap: 0;
-        padding: 15vh 6% 5rem 6%;
+      .welcome-content {
+        text-align: center;
         margin: 0 auto;
-        max-width: 1400px;
+        max-width: 600px;
 
-        @include responsive.medium-lg-screen {
-          gap: 4rem;
-        }
+        .heading {
+          font-weight: normal;
+          font-size: 5rem;
+          line-height: 9rem;
 
-        @include responsive.medium-screen {
-          grid-template-columns: 1fr;
-          gap: 0;
-          text-align: center;
-          padding: 0 6% 5rem 6%;
-        }
-
-        header {
-          margin-top: 2vh;
-
-          @include responsive.medium-screen {
-            margin-top: 5vh;
-          }
-          .heading {
-            font-weight: normal;
-            font-size: 5.5rem;
-            margin-bottom: 3rem;
-
-            .brushtip {
-              display: block;
-              margin: 1rem 0;
-            }
-
-            @include responsive.medium-lg-screen {
-              font-size: 4.5rem;
-            }
+          .brushtip {
+            display: block;
           }
         }
 
         .body-text {
-          margin-top: 8vh;
-
-          p {
-            font-size: 2rem;
-            line-height: 3.5rem;
-          }
+          font-size: 1.8rem;
+          line-height: 3rem;
+          margin-bottom: 4rem;
+          margin-top: 2.5rem;
         }
       }
     }
