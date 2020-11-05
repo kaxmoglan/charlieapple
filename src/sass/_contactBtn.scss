@@ -10,8 +10,19 @@
   transition: all 250ms ease;
   border: none;
   box-shadow: 0.25rem 0.25rem 1rem 0.3rem rgba(37, 37, 37, 0.1);
-  p {
+  a {
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
   }
 
   &:hover {

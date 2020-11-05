@@ -1,0 +1,50 @@
+@use 'colors';
+@use 'responsive';
+
+.privacy {
+  &__main {
+    .privacy-statement {
+      width: 100%;
+      min-height: calc(100vh - 6rem);
+      position: relative;
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 12rem;
+        padding: 7vh 6% 5rem 6%;
+        margin: 0 auto;
+        max-width: 1400px;
+
+        @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+          text-align: center;
+        }
+
+        .icon {
+          svg {
+            color: colors.$green;
+
+            @include responsive.medium-screen {
+              width: 20rem;
+            }
+          }
+        }
+
+        .body-text {
+          h1 {
+            font-size: 5.5rem;
+            margin-bottom: 3rem;
+          }
+
+          h2 {
+            color: colors.$dark_green;
+            font-size: 2.2rem;
+            margin: 4rem 0 2rem 0;
+          }
+        }
+      }
+    }
+  }
+}
