@@ -65,6 +65,7 @@
             &__link {
               display: flex;
               align-items: center;
+              position: relative;
             }
             &__phone,
             &__email {
@@ -100,7 +101,8 @@
                 height: 0.2rem;
                 width: 0;
                 background-color: colors.$green;
-                position: relative;
+                position: absolute;
+                bottom: -0.5rem;
                 left: 50%;
                 transition: all 250ms ease;
               }
@@ -187,7 +189,7 @@
                 transition: all 500ms ease;
 
                 &.active {
-                  transform: scale(0.8) translateY(-2.5rem) translateX(-0.3rem);
+                  transform: scale(0.8) translateY(-3rem) translateX(-0.5rem);
                   color: colors.$dark_green;
                 }
               }
@@ -198,7 +200,7 @@
                 left: 0;
                 width: 20rem;
                 height: 2px;
-                background-color: black;
+                background-color: darken(grey, 20%);
                 opacity: 0;
                 transition: all 250ms ease;
               }
@@ -208,7 +210,7 @@
                 left: 0;
                 width: 20rem;
                 height: 3px;
-                background-color: colors.$dark_green;
+                background-color: colors.$green;
                 opacity: 1;
                 transition: all 500ms ease;
                 transform: scaleX(0);
@@ -248,7 +250,7 @@
               width: 450px;
               display: grid;
               grid-template-columns: 1fr 1fr;
-              gap: 2rem;
+              gap: 1rem 2rem;
 
               input {
                 margin-right: 1rem;
@@ -256,8 +258,6 @@
               }
 
               .checkbox {
-                // flex: 0 0 180px;
-
                 display: flex;
                 align-items: center;
               }
@@ -276,6 +276,16 @@
             #message {
               font-size: 1.6rem;
               padding: 1rem;
+            }
+          }
+
+          .feedback {
+            margin-top: 3rem;
+            select {
+              width: 20rem;
+              height: 2rem;
+              margin-right: 1rem;
+              // font-size: 1.3rem;
             }
           }
 

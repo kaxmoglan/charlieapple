@@ -54,14 +54,14 @@ html(lang="en")
 
           .contact-form
             
-            form(name="contact-us" method="post" action="#")
+            form(name="contact-us" method="post" action="https://formspree.io/f/mrgokjek")
               
               fieldset.details
 
                 p.title Your Details
                 div.spacer
                 .text-input
-                  label.form-detail-label(for="name") Name
+                  label.form-detail-label(for="name") Name *
                   input.form-detail-input(type="text", name="name" id="name" required)
                   .hoverline
                   .activeline
@@ -76,7 +76,7 @@ html(lang="en")
                   .hoverline
                   .activeline
                 .text-input
-                  label.form-detail-label(for="email") Email
+                  label.form-detail-label(for="email") Email *
                   input.form-detail-input(type="email", name="email" id="email" required)
                   .hoverline
                   .activeline
@@ -120,6 +120,18 @@ html(lang="en")
                 p.title Additional Info
                 .text-area
                   textarea(name="message", id="message", cols="30", rows="5" placeholder="Send us a message...")
+
+              fieldset.feedback
+                select(name="contact-method" id="contact-method")
+                  option(value="" disabled selected) Preferred contact method
+                  option(value="Phone") Phone
+                  option(value="email") Email
+
+                select(name="hear-about-us" id="hear-about-us")
+                  option(value="" disabled selected) How did you hear about us?
+                  option(value="google or search") Google or online search engine
+                  option(value="online directory") Online directory
+                  option(value="referral or recommendation") Referral or recommendation
 
               input(type="submit", value="Send" id="send-button")
             

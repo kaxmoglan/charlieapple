@@ -46,6 +46,15 @@
         .green {
           color: colors.$dark_green;
         }
+
+        .body-text {
+          p {
+            margin-bottom: 2rem;
+          }
+          .green {
+            font-size: 2rem;
+          }
+        }
       }
 
       .contactBtn {

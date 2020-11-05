@@ -5,6 +5,10 @@ textInputs.forEach((textInput) => {
   const input = textInput.getElementsByTagName("input");
   const activeline = textInput.getElementsByClassName("activeline");
 
+  if (input[0].value) {
+    label[0].classList.add("active");
+  }
+
   input[0].addEventListener("focusin", () => {
     activeline[0].classList.add("active");
     label[0].classList.add("active");
