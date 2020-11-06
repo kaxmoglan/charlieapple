@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="logo design")
 
 
-  body.logo-design
+  body#top-section.logo-design
     include includes/navbarMain
     +navbarMain("logo", "design")
     include includes/navbarSecondary
@@ -86,6 +86,9 @@ html(lang="en")
             img(src="./images/logo-portfolio/kendi-accessories.png", alt="logo design for Kendi Accessories")
           .logo
             img(src="./images/logo-portfolio/maggies-diner.png", alt="logo design for Maggie's Diner")
+
+        .scroll-component
+          include includes/scroll-to-top
       
             
     include includes/footer

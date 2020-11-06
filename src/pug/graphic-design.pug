@@ -5,7 +5,7 @@ html(lang="en")
     title graphic design, website design, logo design, brochure design, flyer design
     meta(name="description", content="graphic design services including web design, logo design, brochure design, flyer design and business card design")
 
-  body.design-page
+  body#top-section.design-page
     include includes/navbarMain
     +navbarMain("logo", "design")
     include includes/navbarSecondary
@@ -107,5 +107,8 @@ html(lang="en")
               p Ali's Emporium
             a.link(href="#" target="_blank")
               p Ecuadorian Imports
+        
+        .scroll-component
+          include includes/scroll-to-top
 
     include includes/footer

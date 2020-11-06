@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="copywriting services, proofreading services, freelance")
 
 
-  body.copywriting
+  body#top-section.copywriting
     include includes/navbarMain
     +navbarMain("logo", "marketing")
     include includes/navbarSecondary
@@ -60,7 +60,8 @@ html(lang="en")
           p.testimonial__author Marja-Leena Toseland, 
             span.green Darling Magazine
 
-
+        .scroll-component
+          include includes/scroll-to-top
 
 
     include includes/footer

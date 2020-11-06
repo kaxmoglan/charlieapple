@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="event management, conference organiser, event organiser, corporate events, awards ceremonies, street markets, food markets, art markets")
 
 
-  body.event-management
+  body#top-section.event-management
     include includes/navbarMain
     +navbarMain("logo", "events")
     include includes/navbarSecondary
@@ -71,6 +71,9 @@ html(lang="en")
             .point
               p.number 4.
               p.text When you’ve got part of an event planned but need help to expand it
+
+        .scroll-component
+          include includes/scroll-to-top
 
 
 

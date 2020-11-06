@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="copywriting services, proofreading services, freelance, ")
 
 
-  body.consultancy
+  body#top-section.consultancy
     include includes/navbarMain
     +navbarMain("logo", "marketing")
     include includes/navbarSecondary
@@ -50,7 +50,8 @@ html(lang="en")
           p.testimonial__author Corinne Gauthier-Capes, Director, 
             span.green Mosaic Langauges
 
-
+        .scroll-component
+          include includes/scroll-to-top
 
 
     include includes/footer

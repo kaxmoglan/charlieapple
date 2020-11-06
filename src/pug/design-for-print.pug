@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="flyer design, business card design, postcard design, stationary design, leaflet design, magazine design, advert design, brochure design and more")
 
 
-  body.design-for-print
+  body.design-for-print#top-section
     include includes/navbarMain
     +navbarMain("logo", "design")
     include includes/navbarSecondary
@@ -49,8 +49,10 @@ html(lang="en")
           p.testimonial__content I have had the pleasure of working with Charlie Apple on the redesigning of one of our adverts which was due to go out in a local brochure. Their speed and efficiency was top quality, their professional and friendly attitude helped us to work together to get the best results for our practice.  I would highly recommend them to anyone considering marketing ideas.
           p.testimonial__author Sharon Freer, Practice Manager, 
             span.green Wimbledon Dental Studio
+        
+        .scroll-component
+          include includes/scroll-to-top
 
 
 
-
-    include includes/footer
+      include includes/footer

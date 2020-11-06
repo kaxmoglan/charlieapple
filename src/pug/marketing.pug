@@ -4,7 +4,7 @@ html(lang="en")
     include includes/head
     title Marketing
     meta(name="description", content="marketing, product marketing, business marketing, sme, small business, medium business, social media, ecommerce, shopify, wordpress")
-  body.marketing
+  body#top-section.marketing
     include includes/navbarMain
     +navbarMain('logo', 'marketing')
     include includes/navbarSecondary
@@ -55,5 +55,8 @@ html(lang="en")
             p Carole's Creperie
           a.link(href="#" target="_blank")
             p Unity of Self
+
+        .scroll-component
+          include includes/scroll-to-top
 
     include includes/footer

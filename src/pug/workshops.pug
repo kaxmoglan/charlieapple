@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="business workshops, business training, branding, marketing, writing, copywriting, web design, ecommerce")
 
 
-  body.workshops
+  body#top-section.workshops
     include includes/navbarMain
     +navbarMain("logo", "marketing")
     include includes/navbarSecondary
@@ -148,7 +148,8 @@ html(lang="en")
 
             p You will come away from this workshop with a much better understanding of what the internet can and should do for your business, and ready to start the process of developing a new site or redeveloping your old one. 
             
-
+        .scroll-component
+          include includes/scroll-to-top
 
 
 

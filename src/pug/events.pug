@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="description", content="event management, corporate events, awards ceremonies, street markets, food markets, art markets")
 
 
-  body.events
+  body#top-section.events
     include includes/navbarMain
     +navbarMain("logo", "events")
     include includes/navbarSecondary
@@ -45,7 +45,8 @@ html(lang="en")
           p.testimonial__author Corinne Gauthier-Capes, Director, 
             span.green Mosaic Langauges
 
-
+        .scroll-component
+          include includes/scroll-to-top
 
 
     include includes/footer

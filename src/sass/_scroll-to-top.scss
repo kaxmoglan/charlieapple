@@ -1,0 +1,41 @@
+@use 'colors';
+
+#scroll-to-top {
+  width: 10rem;
+  // margin: 0 auto;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    .icon {
+      width: 3rem;
+      color: black;
+      transition: all 500ms ease;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: black;
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: all 250ms ease;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      p {
+        color: colors.$green;
+      }
+
+      .icon {
+        transform: translateY(-0.75rem);
+        color: colors.$green;
+      }
+    }
+  }
+}
