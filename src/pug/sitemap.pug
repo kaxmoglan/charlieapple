@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include includes/head
+    title Charlie Apple Site Map
+    meta(name="description", content="An HTML site map of Charlieapple.com")
+
+
+  body#sitemap
+    include includes/navbarMain
+    +navbarMain("logo", "")
+
+    main#sitemap__main
+      h1 Charlie Apple Site Map
+      
+      ul#master-list 
+        li 
+          a#home(href="/index.html") Home
+            .underline
+          
+          ul 
+            li
+              a.parent(href="/events.html") Events
+                .underline
+              
+              ul
+                li 
+                  a(href="/event-management.html") Event Management
+                    .underline
+                li 
+                  a(href="/markets.html") Markets
+                    .underline
+            li 
+              a.parent(href="/graphic-design.html") Design
+                .underline
+
+              ul 
+                li 
+                  a(href="/website-design.html") Website Design
+                    .underline
+                li 
+                  a(href="design-for-print.html") Design For Print
+                    .underline
+                li 
+                  a(href="logo-design.html") Logo Design
+                    .underline
+            li 
+              a.parent(href="/marketing.html") Marketing
+                .underline
+              
+              ul 
+                li
+                  a(href="/workshops.html") Workshops
+                    .underline
+                li
+                  a(href="/freelance-marketing.html") Freelance
+                    .underline
+                li
+                  a(href="/social-media.html") Social Media
+                    .underline
+                li
+                  a(href="/copywriting-services.html") Copywriting
+                    .underline
+                li
+                  a(href="/consultancy.html") Consultancy
+                    .underline
+            li 
+              a(href="/pricing.html") Pricing
+                .underline
+            li 
+              a(href="/privacy.html") Privacy
+                .underline
+            li 
+              a(href="/contact.html") Contact
+                .underline 
+            li 
+              a(href="/site-map.html") Site Map
+                .underline
+            li 
+              a(href="/testimonials.html") Testimonials
+                .underline
+            li 
+              a(href="/writing-your-website-brief.html") Writing Your Website Brief
+                .underline
+
+
+    include includes/footer

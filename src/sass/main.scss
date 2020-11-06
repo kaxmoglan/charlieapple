@@ -7,9 +7,9 @@
 @use 'home';
 @use 'design';
 @use 'design_for_print';
-@use 'testimonial-section';
-@use 'logo-design';
-@use 'website-design';
+@use 'testimonial_section';
+@use 'logo_design';
+@use 'website_design';
 @use 'events';
 @use 'event_management';
 @use 'markets';
@@ -20,9 +20,11 @@
 @use 'consultancy';
 @use 'social_media';
 @use 'pricing';
-@use 'contact-us';
+@use 'contact_us';
 @use 'testimonials';
 @use 'privacy';
+@use 'website_brief';
+@use 'sitemap';
 
 @font-face {
   font-family: "brushtip";
