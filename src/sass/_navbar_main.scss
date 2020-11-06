@@ -15,7 +15,9 @@
 
   &__logo-container {
     height: 100%;
+    width: 20rem;
     display: flex;
+    align-items: center;
 
     #charlieapple-logo {
       width: 3.5rem;
@@ -25,6 +27,7 @@
     #charlieapple-text {
       height: 100%;
       width: 15rem;
+      margin-top: 3.5rem;
     }
 
     p {
