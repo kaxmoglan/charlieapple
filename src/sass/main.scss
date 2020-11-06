@@ -26,6 +26,7 @@
 @use 'website_brief';
 @use 'sitemap';
 @use 'scroll-to-top';
+@use 'mobile_menu';
 
 @font-face {
   font-family: "brushtip";
@@ -38,8 +39,9 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
-  background: colors.$dark_grey;
+  background: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {

@@ -1,0 +1,141 @@
+#mobile-menu__bar 
+  a(href="/index.html")
+    include svg/charlieapple.svg
+  .menu-btn
+    .menu-btn__burger
+
+
+
+mixin mobileMenu(main, sub)
+  #mobile-menu__menu
+
+    nav#mobile-menu__main-nav
+      ul
+        li 
+          p Events
+          if main == "events"
+            .underline
+        li 
+          p Design
+          if main == "design"
+            .underline
+        li 
+          p Marketing
+          if main == "marketing"
+            .underline
+        li 
+          p More
+          if main == "more"
+            .underline
+    .seperator
+
+    nav#mobile-menu__secondary-nav
+      ul
+        if main == "events"
+          li
+            a(href="/events.html") Events
+            if sub == "events"
+              .underline
+          li 
+            a(href="/event-management.html") Event Management
+            if sub == "event management"
+              .underline
+          li 
+            a(href="/markets.html") Markets
+            if sub == "markets"
+              .underline
+
+        else if main == "design"
+          li 
+            a(href="/graphic-design.html") Design
+            if sub == "design"
+              .underline
+          li
+            a(href="/website-design.html") Website Design
+            if sub == "website design"
+              .underline
+
+          li 
+            a(href="/design-for-print.html") Design for Print
+            if sub == "design for print"
+              .underline
+          
+          li 
+            a(href="/logo-design.html") Logo Design
+            if sub == "logo design"
+              .underline
+
+        else if main == "marketing"
+          li 
+            a(href="/marketing.html") Marketing
+            if sub == "marketing"
+              .underline
+          li
+            a(href="/workshops.html") Workshops
+            if sub == "workshops"
+              .underline
+          li 
+            a(href="/freelance-marketing.html") Freelance
+            if sub == "freelance"
+              .underline
+          li 
+            a(href="/social-media.html") Social Media
+            if sub == "social media"
+              .underline
+          li 
+            a(href="/copywriting-services.html") Copywriting
+            if sub == "copywriting"
+              .underline
+          li 
+            a(href="/consultancy.html") Consultancy
+            if sub == "consultancy"
+              .underline
+
+        else if main == "more"
+          li 
+            a(href="/pricing.html") Pricing
+            if sub == "pricing"
+              .underline
+          li 
+            a(href="/privacy.html") Privacy
+            if sub == "privacy"
+              .underline
+          li 
+            a(href="/contact-us.html") Contact
+            if sub == "contact"
+              .underline
+          li 
+            a(href="/sitemap.html") Site Map
+            if sub == "sitemap"
+              .underline
+          li 
+            a(href="/testimonials.html") Testimonials
+            if sub == "testimonials"
+              .underline
+
+    #contact
+      #contact__phone  
+        include svg/phone.svg
+        a.contact__link(href="tel:+447973987779")
+          p 07973 987 779
+          .underline
+
+      #contact__email  
+        include svg/email.svg
+        a.contact__link(href="mailto:info@charlieapple.com")
+          p info@charlieapple.com
+          .underline
+
+    #social
+      .container
+        a.link(href="http://www.twitter.com" target="_blank")
+            include svg/twitter.svg
+        
+        a.link(href="http://www.facebook.com" target="_blank" id="social-fb-icon")
+          include svg/facebook.svg 
+
+        a.link(href="http://www.instagram.com" target="_blank")
+          include svg/instagram.svg 
+
+        a.link(href="http://www.linkedin.com" target="_blank")
+          include svg/linkedin.svg 

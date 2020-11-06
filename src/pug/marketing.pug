@@ -4,11 +4,15 @@ html(lang="en")
     include includes/head
     title Marketing
     meta(name="description", content="marketing, product marketing, business marketing, sme, small business, medium business, social media, ecommerce, shopify, wordpress")
+    script(src="/js/mobileMenu.js" defer)
+  
   body#top-section.marketing
     include includes/navbarMain
     +navbarMain('logo', 'marketing')
     include includes/navbarSecondary
     +navbarSecondary("marketing", "") 
+    include includes/mobile-menu
+    +mobileMenu("marketing", "workshops")
 
 
     main.marketing__main

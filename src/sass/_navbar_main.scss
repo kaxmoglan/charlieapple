@@ -1,6 +1,11 @@
 @use 'colors';
+@use 'responsive';
 
 .navbar-main {
+  @include responsive.mobile {
+    display: none;
+  }
+
   a:hover {
     color: colors.$white;
     text-decoration: none;
