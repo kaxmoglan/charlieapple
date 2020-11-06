@@ -147,12 +147,18 @@
         .body-text {
           p {
             margin: 2rem 0;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
           }
 
           ul {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             list-style-type: disc;
             margin-left: 2rem;
+
+            li {
+              margin: 0.8rem 0;
+            }
           }
 
           hr {

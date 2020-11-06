@@ -45,17 +45,45 @@
 
       &__container {
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 900px;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        gap: 3rem 2rem;
+        gap: 5rem;
+        padding: 0 5rem;
 
-        p {
-          text-align: center;
-          flex: 0 0 200px;
+        .link {
+          color: colors.$black;
+          position: relative;
+
+          p::after {
+            content: "";
+            width: 0;
+            height: 0.2rem;
+            background-color: colors.$green;
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            opacity: 0;
+            transition: all 250ms ease;
+          }
+
+          &:hover {
+            text-decoration: none;
+
+            p::after {
+              width: 100%;
+              left: 0;
+              opacity: 1;
+            }
+          }
         }
+
+        // p {
+        //   text-align: center;
+        //   flex: 0 0 200px;
+        // }
       }
     }
   }
