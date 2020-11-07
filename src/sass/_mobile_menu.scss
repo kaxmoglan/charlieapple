@@ -2,6 +2,10 @@
 @use 'responsive';
 
 .mobile-menu {
+  display: none;
+  @include responsive.mobile {
+    display: block;
+  }
   &__bar {
     width: 100%;
     height: 6rem;
@@ -247,6 +251,12 @@
 }
 
 @include responsive.medium-lg-screen {
+  .mobile-menu__bar,
+  .mobile-menu__menu {
+    display: none;
+  }
+}
+@include responsive.lg-screen {
   .mobile-menu__bar,
   .mobile-menu__menu {
     display: none;

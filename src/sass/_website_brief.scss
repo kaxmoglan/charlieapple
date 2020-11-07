@@ -1,10 +1,23 @@
 @use 'colors';
+@use 'responsive';
 
 .website-brief {
   background: white;
 
   &__main {
     padding: 5rem;
+
+    @include responsive.mobile {
+      padding: 5rem 5%;
+    }
+
+    .scroll-component {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5rem;
+    }
   }
 
   &__article {
@@ -15,6 +28,9 @@
       text-align: center;
       font-size: 5.5rem;
       margin-bottom: 1rem;
+      @include responsive.mobile {
+        margin-bottom: 3rem;
+      }
     }
 
     h2 {

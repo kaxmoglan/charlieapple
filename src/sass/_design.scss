@@ -8,6 +8,11 @@
       width: 100%;
       padding-top: 10vh;
 
+      @include responsive.mobile {
+        height: calc(100vh - 6rem);
+        padding: 10vh 5% 5% 5%;
+      }
+
       &__content {
         text-align: center;
         max-width: 500px;
@@ -47,6 +52,12 @@
         @include responsive.medium-screen {
           padding: 8rem 0 5rem 4rem;
           gap: 0;
+        }
+
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+          padding: 1rem 5% 5rem 5%;
+          text-align: center;
         }
       }
 
@@ -117,6 +128,11 @@
         .link {
           color: colors.$black;
           position: relative;
+
+          @include responsive.mobile {
+            flex: 0 0 160px;
+            text-align: center;
+          }
 
           p::after {
             content: "";

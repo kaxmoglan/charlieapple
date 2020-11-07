@@ -13,6 +13,10 @@
       margin-top: 6rem;
       background-color: colors.$dark_grey;
 
+      @include responsive.mobile {
+        margin-top: 0;
+      }
+
       .charlieapple-logo {
         position: absolute;
         top: 0;
@@ -21,6 +25,14 @@
         z-index: 10;
         fill: colors.$green;
         pointer-events: none;
+
+        @include responsive.mobile {
+          height: calc(100vh - 6rem);
+          top: 6rem;
+          left: 0;
+          z-index: 0;
+          opacity: 0.1;
+        }
       }
 
       .info {
@@ -44,6 +56,13 @@
           top: 20%;
           right: 5%;
         }
+
+        @include responsive.mobile {
+          position: relative;
+          top: 20vh;
+          right: 0;
+          text-align: center;
+        }
       }
     }
   }
@@ -63,6 +82,12 @@
       @include responsive.medium-screen {
         grid-template-columns: 1fr;
         text-align: center;
+      }
+
+      @include responsive.mobile {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 7rem;
       }
 
       .text {
@@ -85,6 +110,9 @@
           @include responsive.medium-screen {
             margin-left: 0;
           }
+          @include responsive.mobile {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -103,6 +131,9 @@
       }
 
       @include responsive.medium-screen {
+        display: none;
+      }
+      @include responsive.mobile {
         display: none;
       }
     }

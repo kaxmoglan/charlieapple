@@ -2,6 +2,9 @@
 @use 'responsive';
 
 footer {
+  @include responsive.mobile {
+    display: none;
+  }
   width: 100%;
   background-color: colors.$dark_grey;
   padding: 4rem 4rem;

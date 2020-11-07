@@ -16,6 +16,12 @@
   }
 }
 
+@mixin lg-screen {
+  @media screen and (min-width: 1201px) {
+    @content;
+  }
+}
+
 @mixin no-hover {
   @media (hover: none) {
     @content;

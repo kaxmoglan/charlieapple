@@ -6,9 +6,11 @@ html(lang="en")
     title Writing Your Website Brief
     meta(name="description", content="A paper written by Charlie Apple on 'Writing Your Website Brief'")
 
-  body.website-brief
+  body#top-section.website-brief
     include includes/navbarMain
     +navbarMain("logo", "")
+    include includes/mobile-menu
+    +mobileMenu("events", "")
       
     main.website-brief__main
       article.website-brief__article
@@ -121,4 +123,8 @@ html(lang="en")
 
         p.nb NB:  This particular client –the worst I have hadfor indecision–did not run up any additional costsdespite the constant changing of the design.  Why? Because it was my son’s site!
 
+      .scroll-component
+        include includes/scroll-to-top
+
     include includes/footer
+    include includes/mobileFooter

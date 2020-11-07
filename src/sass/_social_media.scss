@@ -27,6 +27,13 @@
           padding: 0 6% 5rem 6%;
         }
 
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 0 6% 5rem 6%;
+        }
+
         header {
           margin-top: 15%;
 
@@ -85,6 +92,9 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        @include responsive.mobile {
+          display: none;
+        }
 
         .icon {
           width: 100%;

@@ -1,0 +1,24 @@
+@use 'responsive';
+@use 'colors';
+
+.mobile-footer {
+  display: none;
+
+  @include responsive.mobile {
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    background-color: colors.$dark_grey;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1.4rem;
+
+    .icon {
+      font-size: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

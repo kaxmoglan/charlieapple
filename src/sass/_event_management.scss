@@ -7,6 +7,10 @@
       width: 100%;
       min-height: calc(100vh - 12rem);
 
+      @include responsive.mobile {
+        min-height: calc(100vh - 6rem);
+      }
+
       .container {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -18,6 +22,12 @@
         align-content: center;
 
         @include responsive.medium-screen {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 0 6% 5rem 6%;
+        }
+        @include responsive.mobile {
           grid-template-columns: 1fr;
           gap: 4rem;
           text-align: center;
@@ -65,6 +75,9 @@
           @include responsive.medium-lg-screen {
             margin-top: 3vh;
           }
+          @include responsive.mobile {
+            margin-top: 10%;
+          }
         }
       }
     }
@@ -95,6 +108,9 @@
           text-align: right;
           font-size: 1.8rem;
         }
+        @include responsive.mobile {
+          width: 100%;
+        }
       }
 
       svg {
@@ -111,6 +127,10 @@
       width: 100%;
       padding: 5rem;
 
+      @include responsive.mobile {
+        padding: 10%;
+      }
+
       h1 {
         font-size: 4rem;
         text-align: center;
@@ -121,6 +141,10 @@
         font-weight: normal;
         text-align: center;
         margin-bottom: 8rem;
+
+        @include responsive.mobile {
+          margin-bottom: 4rem;
+        }
       }
 
       .container {
@@ -130,7 +154,14 @@
         grid-template-columns: 1fr 1fr;
         gap: 5rem 8rem;
 
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+        }
+
         article {
+          @include responsive.mobile {
+            text-align: center;
+          }
           h3 {
             font-size: 2rem;
             color: colors.$green;
@@ -155,6 +186,9 @@
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: 5rem;
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+        }
 
         header {
           display: flex;
@@ -169,6 +203,11 @@
 
             @include responsive.medium-screen {
               font-size: 3.3rem;
+            }
+            @include responsive.mobile {
+              font-size: 3.3rem;
+              text-align: center;
+              margin: 0 auto;
             }
           }
         }

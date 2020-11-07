@@ -26,6 +26,13 @@
           padding: 5vh 10% 5rem 10%;
         }
 
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+          text-align: center;
+          padding: 5vh 5% 5rem 5%;
+        }
+
         header {
           margin-top: 2vh;
 
@@ -86,6 +93,10 @@
         padding: 5rem 0 5rem 0;
       }
 
+      @include responsive.mobile {
+        padding: 5rem 0 5rem 0;
+      }
+
       h2 {
         font-size: 5rem;
         color: colors.$green;
@@ -101,6 +112,11 @@
 
         @include responsive.medium-screen {
           grid-template-columns: 1fr;
+        }
+
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+          gap: 5rem;
         }
 
         article {
@@ -164,6 +180,10 @@
           width: 100%;
           flex: 0 1 200px;
           transition: all 500ms ease;
+
+          @include responsive.mobile {
+            flex: 0 1 100%;
+          }
 
           &:hover {
             transform: scale(1.3);

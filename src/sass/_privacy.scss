@@ -22,12 +22,21 @@
           text-align: center;
         }
 
+        @include responsive.mobile {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+          text-align: center;
+        }
+
         .icon {
           svg {
             color: colors.$green;
 
             @include responsive.medium-screen {
               width: 20rem;
+            }
+            @include responsive.mobile {
+              width: 10rem;
             }
           }
         }
