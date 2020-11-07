@@ -42,7 +42,9 @@ let eventsMenu, designMenu, marketingMenu, moreMenu, newMenu;
 
 // EVENT LISTENERS
 eventsBtn.addEventListener("click", handleEventsMenu);
+designBtn.addEventListener("click", handleDesignMenu);
 marketingBtn.addEventListener("click", handleMarketingMenu);
+moreBtn.addEventListener("click", handleMoreMenu);
 
 // HANDLERS
 function handleEventsMenu() {
@@ -67,6 +69,28 @@ function handleEventsMenu() {
     }
   }
 }
+function handleDesignMenu() {
+  if (currentMenuId !== "design-list") {
+    allButtons.forEach((btn) => btn.classList.remove("active"));
+    designBtn.classList.add("active");
+
+    removeCurrentMenu();
+
+    if (originalMenuId !== "design-list") {
+      if (designMenu) {
+        showCreatedMenu(designMenu, "design-list");
+      } else {
+        createAndShowMenu(
+          createDesignMenu,
+          "#design-menu-overlay",
+          "design-list"
+        );
+      }
+    } else {
+      showOriginalMenu();
+    }
+  }
+}
 
 function handleMarketingMenu() {
   if (currentMenuId !== "marketing-list") {
@@ -81,10 +105,28 @@ function handleMarketingMenu() {
       } else {
         createAndShowMenu(
           createMarketingMenu,
-          marketingMenu,
           "#marketing-menu-overlay",
           "marketing-list"
         );
+      }
+    } else {
+      showOriginalMenu();
+    }
+  }
+}
+
+function handleMoreMenu() {
+  if (currentMenuId !== "more-list") {
+    allButtons.forEach((btn) => btn.classList.remove("active"));
+    moreBtn.classList.add("active");
+
+    removeCurrentMenu();
+
+    if (originalMenuId !== "more-list") {
+      if (moreMenu) {
+        showCreatedMenu(moreMenu, "more-list");
+      } else {
+        createAndShowMenu(createMoreMenu, "#more-menu-overlay", "more-list");
       }
     } else {
       showOriginalMenu();
@@ -124,7 +166,7 @@ function createAndShowMenu(cb, querySelector, menuId) {
     if (menuId === "events-list") eventsMenu = newMenu;
     if (menuId === "marketing-list") marketingMenu = newMenu;
     if (menuId === "design-list") designMenu = newMenu;
-    if (menuId === "marketing-list") marketingMenu = newMenu;
+    if (menuId === "more-list") moreMenu = newMenu;
   }, 400);
 }
 
@@ -133,7 +175,7 @@ function showOriginalMenu() {
   setTimeout(() => {
     originalMenu.classList.remove("fade-out");
     originalMenu.classList.add("fade-in");
-    currentMenuId = "marketing-list";
+    currentMenuId = originalMenuId;
     currentMenu = originalMenu;
   }, 400);
 }
@@ -162,6 +204,29 @@ function createEventsMenu() {
   });
 }
 
+function createDesignMenu() {
+  const subItems = [
+    { name: "Design", link: "/graphic-design.html" },
+    { name: "Website Design", link: "/website-design.html" },
+    { name: "Design for Print", link: "/design-for-print.html" },
+    { name: "Logo Design", link: "/logo-design.html" },
+  ];
+  const list = document.createElement("ul");
+  list.classList.add("secondary-nav__list");
+  list.id = "design-menu-overlay";
+  list.classList.add("fade-out");
+  subItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+    link.setAttribute("href", item.link);
+    link.innerText = item.name;
+
+    listItem.appendChild(link);
+    list.appendChild(listItem);
+    menuContainer.appendChild(list);
+  });
+}
+
 function createMarketingMenu() {
   const subItems = [
     { name: "Marketing", link: "/marketing.html" },
@@ -174,6 +239,30 @@ function createMarketingMenu() {
   const list = document.createElement("ul");
   list.classList.add("secondary-nav__list");
   list.id = "marketing-menu-overlay";
+  list.classList.add("fade-out");
+  subItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+    link.setAttribute("href", item.link);
+    link.innerText = item.name;
+
+    listItem.appendChild(link);
+    list.appendChild(listItem);
+    menuContainer.appendChild(list);
+  });
+}
+
+function createMoreMenu() {
+  const subItems = [
+    { name: "Pricing", link: "/pricing.html" },
+    { name: "Privacy", link: "/privacy.html" },
+    { name: "Contact", link: "/contact-us.html" },
+    { name: "Site Map", link: "/sitemap.html" },
+    { name: "Testimonials", link: "/testimonials.html" },
+  ];
+  const list = document.createElement("ul");
+  list.classList.add("secondary-nav__list");
+  list.id = "more-menu-overlay";
   list.classList.add("fade-out");
   subItems.forEach((item) => {
     const listItem = document.createElement("li");
