@@ -1,4 +1,4 @@
-#mobile-menu__bar 
+.mobile-menu__bar 
   a(href="/index.html")
     include svg/charlieapple.svg
   .menu-btn
@@ -7,31 +7,27 @@
 
 
 mixin mobileMenu(main, sub)
-  #mobile-menu__menu
+  .mobile-menu__menu
 
-    nav#mobile-menu__main-nav
+    nav.mobile-menu__main-nav
       ul
-        li 
+        li.main-nav__list-item#main-menu__events(class = main == "events" ? "active" : "")
           p Events
-          if main == "events"
-            .underline
-        li 
+          .underline
+        li.main-nav__list-item#main-menu__design(class = main == "design" ? "active" : "")
           p Design
-          if main == "design"
-            .underline
-        li 
+          .underline
+        li.main-nav__list-item#main-menu__marketing(class = main == "marketing" ? "active" : "")
           p Marketing
-          if main == "marketing"
-            .underline
-        li 
+          .underline
+        li.main-nav__list-item#main-menu__more(class = main == "more" ? "active" : "") 
           p More
-          if main == "more"
-            .underline
+          .underline
     .seperator
 
-    nav#mobile-menu__secondary-nav
-      ul
-        if main == "events"
+    nav.mobile-menu__secondary-nav
+      if main == "events"
+        ul.secondary-nav__list#events-list
           li
             a(href="/events.html") Events
             if sub == "events"
@@ -45,7 +41,8 @@ mixin mobileMenu(main, sub)
             if sub == "markets"
               .underline
 
-        else if main == "design"
+      else if main == "design"
+        ul.secondary-nav__list#design-list
           li 
             a(href="/graphic-design.html") Design
             if sub == "design"
@@ -65,7 +62,8 @@ mixin mobileMenu(main, sub)
             if sub == "logo design"
               .underline
 
-        else if main == "marketing"
+      else if main == "marketing"
+        ul.secondary-nav__list#marketing-list
           li 
             a(href="/marketing.html") Marketing
             if sub == "marketing"
@@ -91,7 +89,8 @@ mixin mobileMenu(main, sub)
             if sub == "consultancy"
               .underline
 
-        else if main == "more"
+      else if main == "more"
+        ul.secondary-nav__list#more-list
           li 
             a(href="/pricing.html") Pricing
             if sub == "pricing"
