@@ -111,6 +111,9 @@
             @include responsive.medium-lg-screen {
               width: 3rem;
             }
+            @include responsive.medium-screen {
+              width: 3rem;
+            }
           }
 
           .text {
