@@ -31,80 +31,114 @@ const eventsBtn = document.querySelector("#main-menu__events");
 const designBtn = document.querySelector("#main-menu__design");
 const marketingBtn = document.querySelector("#main-menu__marketing");
 const moreBtn = document.querySelector("#main-menu__more");
-
 const allButtons = document.querySelectorAll(".main-nav__list-item");
 
+// Original Menu
 let currentMenuId = originalMenuId;
 let currentMenu = originalMenu;
 
-let eventsMenu, designMenu, marketingMenu, moreMenu;
+// REQUIRED VARIABLES
+let eventsMenu, designMenu, marketingMenu, moreMenu, newMenu;
 
-const handleEventsMenu = () => {
+// EVENT LISTENERS
+eventsBtn.addEventListener("click", handleEventsMenu);
+marketingBtn.addEventListener("click", handleMarketingMenu);
+
+// HANDLERS
+function handleEventsMenu() {
   if (currentMenuId !== "events-list") {
     allButtons.forEach((btn) => btn.classList.remove("active"));
     eventsBtn.classList.add("active");
 
-    currentMenu.classList.remove("fade-in");
-    currentMenu.classList.add("fade-out");
-    setTimeout(() => currentMenu.classList.add("remove"), 350);
+    removeCurrentMenu();
 
     if (originalMenuId !== "events-list") {
       if (eventsMenu) {
-        setTimeout(() => eventsMenu.classList.remove("remove"), 350);
-        setTimeout(() => {
-          eventsMenu.classList.remove("fade-out");
-          eventsMenu.classList.add("fade-in");
-          currentMenuId = "events-list";
-          currentMenu = eventsMenu;
-        }, 400);
+        showCreatedMenu(eventsMenu, "events-list");
       } else {
-        setTimeout(() => createEventsMenu(), 350);
-        setTimeout(() => {
-          eventsMenu = document.querySelector("#events-menu-overlay");
-          eventsMenu.classList.remove("fade-out");
-          eventsMenu.classList.add("fade-in");
-          currentMenuId = "events-list";
-          currentMenu = eventsMenu;
-        }, 400);
+        createAndShowMenu(
+          createEventsMenu,
+          "#events-menu-overlay",
+          "events-list"
+        );
       }
+    } else {
+      showOriginalMenu();
     }
   }
-};
+}
 
-const handleMarketingMenu = () => {
+function handleMarketingMenu() {
   if (currentMenuId !== "marketing-list") {
     allButtons.forEach((btn) => btn.classList.remove("active"));
     marketingBtn.classList.add("active");
 
-    currentMenu.classList.remove("fade-in");
-    currentMenu.classList.add("fade-out");
-    setTimeout(() => currentMenu.classList.add("remove"), 350);
+    removeCurrentMenu();
 
     if (originalMenuId !== "marketing-list") {
-      setTimeout(() => createMarketingMenu(), 350);
-      setTimeout(() => {
-        marketingMenu = document.querySelector("#marketing-menu-overlay");
-        eventsMenu.classList.remove("fade-out");
-        eventsMenu.classList.add("fade-in");
-        currentMenuId = "marketing-list";
-        currentMenu = marketingMenu;
-      }, 400);
+      if (marketingMenu) {
+        showCreatedMenu(marketingMenu, "marketing-list");
+      } else {
+        createAndShowMenu(
+          createMarketingMenu,
+          marketingMenu,
+          "#marketing-menu-overlay",
+          "marketing-list"
+        );
+      }
     } else {
-      setTimeout(() => originalMenu.classList.remove("remove"), 350);
-      setTimeout(() => {
-        originalMenu.classList.remove("fade-out");
-        originalMenu.classList.add("fade-in");
-        currentMenuId = "marketing-list";
-        currentMenu = originalMenu;
-      }, 400);
+      showOriginalMenu();
     }
   }
-};
+}
 
-eventsBtn.addEventListener("click", handleEventsMenu);
-marketingBtn.addEventListener("click", handleMarketingMenu);
+// FUNCTIONS
 
-// Create Menus
+function removeCurrentMenu() {
+  currentMenu.classList.remove("fade-in");
+  currentMenu.classList.add("fade-out");
+  setTimeout(() => currentMenu.classList.add("remove"), 350);
+}
+
+function showCreatedMenu(menu, menuId) {
+  setTimeout(() => menu.classList.remove("remove"), 350);
+
+  setTimeout(() => {
+    menu.classList.remove("fade-out");
+    menu.classList.add("fade-in");
+    currentMenuId = menuId;
+    currentMenu = menu;
+  }, 400);
+}
+
+function createAndShowMenu(cb, querySelector, menuId) {
+  setTimeout(() => cb(), 350);
+
+  setTimeout(() => {
+    newMenu = document.querySelector(querySelector);
+    newMenu.classList.remove("fade-out");
+    newMenu.classList.add("fade-in");
+    currentMenuId = menuId;
+    currentMenu = newMenu;
+
+    if (menuId === "events-list") eventsMenu = newMenu;
+    if (menuId === "marketing-list") marketingMenu = newMenu;
+    if (menuId === "design-list") designMenu = newMenu;
+    if (menuId === "marketing-list") marketingMenu = newMenu;
+  }, 400);
+}
+
+function showOriginalMenu() {
+  setTimeout(() => originalMenu.classList.remove("remove"), 350);
+  setTimeout(() => {
+    originalMenu.classList.remove("fade-out");
+    originalMenu.classList.add("fade-in");
+    currentMenuId = "marketing-list";
+    currentMenu = originalMenu;
+  }, 400);
+}
+
+// CREATE MENUS
 
 function createEventsMenu() {
   const subItems = [
