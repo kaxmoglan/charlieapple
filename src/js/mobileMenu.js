@@ -137,7 +137,6 @@ function handleMoreMenu() {
 // FUNCTIONS
 
 function removeCurrentMenu() {
-  currentMenu.classList.remove("fade-in");
   currentMenu.classList.add("fade-out");
   setTimeout(() => currentMenu.classList.add("remove"), 350);
 }
@@ -147,7 +146,6 @@ function showCreatedMenu(menu, menuId) {
 
   setTimeout(() => {
     menu.classList.remove("fade-out");
-    menu.classList.add("fade-in");
     currentMenuId = menuId;
     currentMenu = menu;
   }, 400);
@@ -159,7 +157,6 @@ function createAndShowMenu(cb, querySelector, menuId) {
   setTimeout(() => {
     newMenu = document.querySelector(querySelector);
     newMenu.classList.remove("fade-out");
-    newMenu.classList.add("fade-in");
     currentMenuId = menuId;
     currentMenu = newMenu;
 
@@ -174,7 +171,6 @@ function showOriginalMenu() {
   setTimeout(() => originalMenu.classList.remove("remove"), 350);
   setTimeout(() => {
     originalMenu.classList.remove("fade-out");
-    originalMenu.classList.add("fade-in");
     currentMenuId = originalMenuId;
     currentMenu = originalMenu;
   }, 400);
