@@ -54,7 +54,7 @@
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        gap: 5rem;
+        // gap: 5rem;
         padding: 0 5rem;
 
         @include responsive.mobile {
@@ -64,6 +64,7 @@
         .link {
           color: colors.$black;
           position: relative;
+          margin: 2.5rem;
 
           @include responsive.mobile {
             flex: 0 0 140px;
