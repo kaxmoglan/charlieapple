@@ -8,6 +8,10 @@
       min-height: calc(100vh - 12rem);
       position: relative;
 
+      @include responsive.mobile {
+        min-height: calc(100vh - 6rem);
+      }
+
       .container {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -43,6 +47,9 @@
 
           @include responsive.medium-screen {
             margin-top: 10%;
+          }
+          @include responsive.mobile {
+            margin-top: 5vh;
           }
 
           h1 {

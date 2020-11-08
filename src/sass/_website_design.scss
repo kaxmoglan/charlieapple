@@ -439,7 +439,8 @@
           position: relative;
 
           @include responsive.mobile {
-            flex: 0 0 130px;
+            flex: 0 0 100px;
+            text-align: center;
           }
 
           p::after {

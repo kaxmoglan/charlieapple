@@ -36,6 +36,11 @@
 
         header {
           margin-top: 8vh;
+
+          @include responsive.mobile {
+            margin-top: 5vh;
+          }
+
           .heading {
             font-weight: normal;
             font-size: 5.5rem;
@@ -76,7 +81,7 @@
             margin-top: 3vh;
           }
           @include responsive.mobile {
-            margin-top: 10%;
+            margin-top: 5%;
           }
         }
       }

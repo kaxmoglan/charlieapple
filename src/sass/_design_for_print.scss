@@ -7,6 +7,10 @@
       width: 100%;
       min-height: calc(100vh - 12rem);
 
+      @include responsive.mobile {
+        min-height: calc(100vh - 6rem);
+      }
+
       .container {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -39,6 +43,7 @@
           @include responsive.medium-screen {
             margin-top: 5vh;
           }
+
           .heading {
             font-weight: normal;
             font-size: 5.5rem;
