@@ -5,6 +5,7 @@
   display: none;
   @include responsive.mobile {
     display: block;
+    overflow-x: hidden;
   }
   &__bar {
     width: 100%;
