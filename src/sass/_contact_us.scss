@@ -47,9 +47,6 @@
         }
 
         .body-text {
-          @include responsive.mobile {
-            min-height: calc(100vh - 6rem);
-          }
           .title {
             @include responsive.mobile {
             }
@@ -172,6 +169,20 @@
         }
 
         .contact-form {
+          &__title {
+            color: colors.$dark_green;
+            text-align: center;
+            font-size: 4.5rem;
+            display: none;
+            margin-bottom: 5rem;
+            margin-top: 10rem;
+            @include responsive.medium-screen {
+              display: block;
+            }
+            @include responsive.mobile {
+              display: block;
+            }
+          }
           fieldset {
             padding: 1rem;
             border: none;
