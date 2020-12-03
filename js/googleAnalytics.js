@@ -1,0 +1,1 @@
+function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-31084152-1",{cookie_flags:"SameSite=None;Secure"});
