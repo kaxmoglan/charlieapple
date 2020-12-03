@@ -27,6 +27,12 @@
         fill: colors.$green;
         pointer-events: none;
 
+        @include responsive.medium-screen {
+          height: calc(100vh - 6rem);
+          top: 0;
+          z-index: 10;
+        }
+
         @include responsive.mobile {
           height: calc(100vh - 6rem);
           top: 6rem;
@@ -38,7 +44,7 @@
 
       .info {
         position: absolute;
-        top: 30%;
+        top: 30vh;
         right: 10%;
         color: colors.$white;
 
@@ -52,9 +58,14 @@
           margin-top: 2rem;
         }
 
+        @include responsive.medium-lg-screen {
+          text-align: center;
+          // top: 35vh;
+          right: 5%;
+        }
         @include responsive.medium-screen {
           text-align: center;
-          top: 40%;
+          top: 35vh;
           right: 2%;
         }
 

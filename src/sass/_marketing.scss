@@ -48,7 +48,7 @@
         font-size: 5rem;
         text-align: center;
         color: colors.$green;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
       }
 
       &__container {
@@ -73,28 +73,6 @@
             flex: 0 0 140px;
 
             text-align: center;
-          }
-
-          p::after {
-            content: "";
-            width: 0;
-            height: 0.2rem;
-            background-color: colors.$green;
-            position: absolute;
-            bottom: -0.5rem;
-            left: 50%;
-            opacity: 0;
-            transition: all 250ms ease;
-          }
-
-          &:hover {
-            text-decoration: none;
-
-            p::after {
-              width: 100%;
-              left: 0;
-              opacity: 1;
-            }
           }
         }
       }
