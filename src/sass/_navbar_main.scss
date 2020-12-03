@@ -20,29 +20,20 @@
 
   &__logo-container {
     height: 100%;
-    width: 28rem;
+    width: 30rem;
     display: flex;
     align-items: center;
 
     #bellpepper-logo {
       width: 3.5rem;
-      fill: colors.$green;
-    }
-
-    #belpepper-text {
-      height: 100%;
-      width: 20rem;
-      margin-top: 3.5rem;
+      fill: colors.$white;
     }
 
     p {
-      font-family: "brushtip";
       color: colors.$white;
       font-size: 2.5rem;
       position: relative;
       left: 1.5rem;
-      top: 0.8rem;
-      font-weight: normal;
     }
 
     svg {

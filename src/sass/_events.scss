@@ -19,12 +19,12 @@
         max-width: 600px;
 
         .heading {
-          font-weight: normal;
           font-size: 5rem;
-          line-height: 9rem;
+          font-weight: normal;
+          line-height: 6rem;
 
-          .brushtip {
-            display: block;
+          &.bellpepper-font {
+            font-size: 4rem;
           }
         }
 

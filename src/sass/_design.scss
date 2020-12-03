@@ -21,7 +21,11 @@
         .heading {
           font-size: 5rem;
           font-weight: normal;
-          line-height: 9rem;
+          line-height: 6rem;
+
+          &.bellpepper-font {
+            font-size: 4rem;
+          }
         }
 
         .body-text {

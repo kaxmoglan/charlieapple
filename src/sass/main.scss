@@ -30,9 +30,9 @@
 @use 'mobile_footer';
 
 @font-face {
-  font-family: "brushtip";
-  src: url("./fonts/btctrial-webfont.woff2") format("woff2"),
-    url("./fonts/btctrial-webfont.woff") format("woff");
+  font-family: "bellpepper-font";
+  src: url("./fonts/rawengulksans-094-webfont.woff2") format("woff2"),
+    url("./fonts/rawengulksans-094-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -79,4 +79,8 @@ p {
 
 .brushtip {
   font-family: "brushtip", "Roboto", sans-serif;
+}
+
+.bellpepper-font {
+  font-family: "bellpepper-font", "Roboto", sans-serif;
 }
