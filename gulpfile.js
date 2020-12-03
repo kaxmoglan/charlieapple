@@ -45,7 +45,11 @@ function css() {
 
 // JS
 function js() {
-  return gulp.src(files.src.js).pipe(jsmin()).pipe(gulp.dest(files.dest.js));
+  return gulp
+    .src(files.src.js)
+    .pipe(jsmin())
+    .pipe(concat("app.js"))
+    .pipe(gulp.dest(files.dest.js));
 }
 
 // IMAGES
