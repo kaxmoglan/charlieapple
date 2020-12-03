@@ -119,7 +119,6 @@
       &__text {
         margin: 0 auto;
         max-width: 1000px;
-        // gap: 5rem 5rem;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -131,14 +130,15 @@
 
           @include responsive.mobile {
             flex: 0 0 160px;
-            // text-align: center;
+            margin: 1.5rem;
           }
         }
 
         .link {
+          display: inline-block;
+          width: 100%;
           color: colors.$black;
           position: relative;
-          padding: 2.5rem;
 
           p::after {
             content: "";

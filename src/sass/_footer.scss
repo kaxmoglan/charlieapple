@@ -118,7 +118,7 @@ footer {
       margin: 0 0 2rem 20%;
 
       p {
-        margin-left: 2rem;
+        font-size: 1.3rem;
       }
 
       @include responsive.medium-screen {
@@ -127,6 +127,7 @@ footer {
 
       svg {
         width: 2.3rem;
+        margin-right: 2rem;
       }
 
       .underline {

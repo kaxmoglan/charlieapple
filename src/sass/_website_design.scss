@@ -428,7 +428,6 @@
       .container {
         display: flex;
         flex-flow: row wrap;
-        // gap: 5rem;
         align-items: center;
         justify-content: center;
         max-width: 1000px;
@@ -440,8 +439,9 @@
           margin: 2.5rem;
 
           @include responsive.mobile {
-            flex: 0 0 100px;
+            flex: 0 0 150px;
             text-align: center;
+            margin: 1.5rem;
           }
 
           p::after {
@@ -470,11 +470,11 @@
         .coming-soon {
           color: colors.$white;
           position: relative;
-          cursor: pointer;
           margin: 2.5rem;
 
           @include responsive.mobile {
-            flex: 0 0 100px;
+            flex: 0 0 150px;
+            margin: 1.5rem;
           }
 
           p::after {

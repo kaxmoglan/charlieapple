@@ -1,6 +1,6 @@
 .mobile-menu__bar 
   a(href="./index.html")
-    include svg/charlieapple.svg
+    include svg/bellpepper-design.svg
   .menu-btn
     .menu-btn__burger
 
@@ -11,14 +11,14 @@ mixin mobileMenu(main, sub)
 
     nav.mobile-menu__main-nav
       ul
-        li.main-nav__list-item#main-menu__events(class = main == "events" ? "active" : "")
-          p Events
-          .underline
         li.main-nav__list-item#main-menu__design(class = main == "design" ? "active" : "")
           p Design
           .underline
         li.main-nav__list-item#main-menu__marketing(class = main == "marketing" ? "active" : "")
           p Marketing
+          .underline
+        li.main-nav__list-item#main-menu__events(class = main == "events" ? "active" : "")
+          p Events
           .underline
         li.main-nav__list-item#main-menu__more(class = main == "more" ? "active" : "") 
           p More
@@ -121,8 +121,8 @@ mixin mobileMenu(main, sub)
 
       #contact__email  
         include svg/email.svg
-        a.contact__link(href="mailto:info@charlieapple.com")
-          p info@charlieapple.com
+        a.contact__link(href="mailto:info@bellpepperdesign.com")
+          p info@bellpepperdesign.com
           .underline
 
     #social
