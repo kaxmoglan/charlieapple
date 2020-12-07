@@ -138,23 +138,23 @@
           }
         }
 
+        a p::after {
+          content: "";
+          width: 0;
+          height: 0.2rem;
+          background-color: colors.$green;
+          position: absolute;
+          bottom: -0.5rem;
+          left: 50%;
+          opacity: 0;
+          transition: all 250ms ease;
+        }
+
         .link {
           display: inline-block;
           width: 100%;
           color: colors.$black;
           position: relative;
-
-          p::after {
-            content: "";
-            width: 0;
-            height: 0.2rem;
-            background-color: colors.$green;
-            position: absolute;
-            bottom: -0.5rem;
-            left: 50%;
-            opacity: 0;
-            transition: all 250ms ease;
-          }
 
           &:hover {
             text-decoration: none;
