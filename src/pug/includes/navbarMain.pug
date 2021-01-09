@@ -2,9 +2,9 @@ mixin navbarMain(logo, active)
   nav.navbar-main
     if logo == "logo"
       .navbar-main__logo-container
-        a(href="./index.html" id="bellpepper-logo")
+        a(href="./" id="bellpepper-logo")
           include svg/bellpepper-design.svg
-        a(href="./index.html" id="bellpepper-text")
+        a(href="./" id="bellpepper-text")
           p.bellpepper-font Bell Pepper Design
           //- include svg/bellpepper-text.svg
     
@@ -13,7 +13,7 @@ mixin navbarMain(logo, active)
       li.navbar-main__item
         a.navbar-main__link(
           id="design-link" 
-          href="./graphic-design.html" 
+          href="./graphic-design" 
           class= active == "design" ? "active" : ""
         )
           p Design
@@ -22,7 +22,7 @@ mixin navbarMain(logo, active)
       li.navbar-main__item
         a.navbar-main__link(
           id="marketing-link" 
-          href="./marketing.html" 
+          href="./marketing" 
           class= active == "marketing" ? "active" : ""
         )
           p Marketing
@@ -31,7 +31,7 @@ mixin navbarMain(logo, active)
       li.navbar-main__item
         a.navbar-main__link(
           id="events-link" 
-          href="./events.html" 
+          href="./events" 
           class= active == "events" ? "active" : ""
         )
           p Events
