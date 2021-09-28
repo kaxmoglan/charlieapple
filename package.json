@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist",
+		"watch": "npx gulp watch",
+		"build": "npx gulp build"
 	},
 	"author": "maximilian",
 	"license": "ISC",
